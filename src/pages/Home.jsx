@@ -1,0 +1,1 @@
+// starting page for both public and authenticated users -> featured spacecraft

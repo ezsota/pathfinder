@@ -1,0 +1,1 @@
+// logo + standard navigation + user navigation + login/logout + user profile

@@ -1,0 +1,1 @@
+// site layout before users log-in -> restricted/hidden features

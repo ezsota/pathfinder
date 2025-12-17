@@ -1,0 +1,1 @@
+// display this page when user logs out as well, change body content message "successfully logged out"

@@ -1,0 +1,1 @@
+// list of -> thumbnail, name, rating, price, sub_category (CraftTiles.jsx)

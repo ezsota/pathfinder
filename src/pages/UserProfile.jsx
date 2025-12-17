@@ -1,0 +1,1 @@
+// user details page: name, username, email, password, address, active rentals (make all editable)

@@ -1,0 +1,1 @@
+// hero banner on home page, login/logout-page, 

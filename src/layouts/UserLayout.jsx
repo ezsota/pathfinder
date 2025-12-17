@@ -1,0 +1,1 @@
+//site layout after users logins/authenticates -> add navbar features ->  UserReservations.jsx, UserProfile.jsx, Logout Link/Feature -> starting page for authed users
