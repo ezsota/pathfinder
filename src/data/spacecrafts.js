@@ -1,8 +1,8 @@
 // spacecraft data
-const data = {
+export const data = {
     "spacecrafts": [
         {
-            "id": 1,
+            "id": "me-1",
             "name": "shepard",
             "sub_category": "ground",
             "size": "small",
@@ -21,7 +21,7 @@ const data = {
             "max_speed": 1
         },
         {
-            "id": 2,
+            "id": "ds-2",
             "name": "aegis 7",
             "sub_category": "none",
             "size": "medium",
@@ -39,7 +39,7 @@ const data = {
             "max_speed": 2
         },
         {
-            "id": 3,
+            "id": "sb-3",
             "name": "tetrapod",
             "sub_category": "ground",
             "size": "medium",
@@ -59,7 +59,7 @@ const data = {
             "max_speed": 1
         },
         {
-            "id": 4,
+            "id": "dm-4",
             "name": "novik",
             "sub_category": "ground",
             "size": "large",
@@ -77,7 +77,7 @@ const data = {
             "max_speed": 2
         },
         {
-            "id": 5,
+            "id": "dm-5",
             "name": "thira",
             "sub_category": "none",
             "size": "large",
@@ -98,7 +98,7 @@ const data = {
             "max_speed": 3
         },
         {
-            "id": 6,
+            "id": "me-6",
             "name": "liari",
             "sub_category": "aquatic, ground",
             "size": "small",
@@ -118,7 +118,7 @@ const data = {
             "max_speed": 1
         },
         {
-            "id": 7,
+            "id": "me-7",
             "name": "garrus",
             "sub_category": "aerial, ground",
             "size": "medium",
@@ -136,7 +136,7 @@ const data = {
             "max_speed": 3
         },
         {
-            "id": 8,
+            "id": "me-8",
             "name": "saren",
             "sub_category": "aerial",
             "size": "small",
@@ -157,7 +157,7 @@ const data = {
             "max_speed": 3.5
         },
         {
-            "id": 9,
+            "id": "ds-9",
             "name": "ishimaru",
             "sub_category": "aerial",
             "size": "x-large",
@@ -185,8 +185,8 @@ const data = {
             "max_speed": 2
         },
         {
-            "id": 10,
-            "name": "naytiba",
+            "id": "sb-10",
+            "name": "iberis",
             "sub_category": "aerial",
             "size": "small",
             "max_occupancy": 5,
@@ -201,7 +201,7 @@ const data = {
             "max_speed": 1
         }
     ]
-}
+};
 
 /*
 TEMPLATE
