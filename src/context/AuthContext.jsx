@@ -1,1 +1,44 @@
-// user authentication API
+/*
+    React context provides global user authentication state:
+        - allows logon status
+        - blocks access (ProtectedRoute)
+        - filter/display reservations by user/id
+
+    crypto.randomUUID() -> uses the "crypto" module (native JS), using the "randomUUID" method, to simulate a real world user id creation.
+
+    {children} -> built-in React prop allowing pass/access to external nested data -> used here to pass the user data to the app for routing/rendering
+*/
+
+import { useState, useEffect, createContext, useContext } from "react";
+
+const AuthContext = createContext(null);
+
+export function AuthProvider({ children }) {
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        // Check for stored user on page loads, persists on reloads
+        const storedUser = localStorage.getItem("user");
+        if (storedUser) {
+            setUser(JSON.parse(storedUser));
+        }
+    }, []);
+
+    const login = (email) => {
+        // Creates/Stores user using email and crypto
+        const userData = { id: crypto.randomUUID(), email };
+        localStorage.setItem("user", JSON.stringify(userData));
+        setUser(userData);
+    };
+
+    const logout = () => {
+        localStorage.removeItem("user");
+        setUser(null);
+    };
+
+    return (
+        <AuthContext.Provider value={{ user, login, logout }}>
+            {children}
+        </AuthContext.Provider>
+    );
+};

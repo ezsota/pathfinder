@@ -2,6 +2,6 @@
 
 export default function CraftDetails() {
     return (
-        <h2>This is the details for each craft.</h2>
+        <h2>This is the details for each craft, rendered by id.</h2>
     );
 };

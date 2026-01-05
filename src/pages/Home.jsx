@@ -2,6 +2,6 @@
 
 export default function Home(){
     return(
-        <h1>This is the landing page for all users.</h1>
+        <p>Home: This is the landing page for all users.</p>
     );
 };

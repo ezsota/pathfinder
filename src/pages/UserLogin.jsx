@@ -2,6 +2,6 @@
 
 export default function UserLogin() {
     return(
-        <h1>The login prompt/logout message page.</h1>
+        <h1>The login page.</h1>
     );
 };
