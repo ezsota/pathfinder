@@ -7,7 +7,7 @@
     Import Bootstrap first so it doesn't override custom CSS
 
   AuthContext/AuthProvider:
-    Wrapping <AuthProvider> around <BrowserRouter> allows everything to access the auth state within AuthContext.jsx
+    Wrapping <AuthProvider> around <BrowserRouter> allows everything to access the auth state within AuthContext.jsx, AuthProvider isauth logic
 */
 
 import React from 'react';

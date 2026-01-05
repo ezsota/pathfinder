@@ -7,6 +7,7 @@
     crypto.randomUUID() -> uses the "crypto" module (native JS), using the "randomUUID" method, to simulate a real world user id creation.
 
     {children} -> built-in React prop allowing pass/access to external nested data -> used here to pass the user data to the app for routing/rendering
+    AuthProvider is wraps around <BrowserRouter> in index.jsx to allows authenticaton management logic to be accessed across the app using AuthContext below
 */
 
 import { useState, useEffect, createContext, useContext } from "react";
