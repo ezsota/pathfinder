@@ -1,14 +1,15 @@
 // spacecraft data
-export const data = {
+export const craftData = {
     "spacecrafts": [
         {
             "id": "me-1",
             "name": "shepard",
-            "sub_category": "ground",
+            "category": "ground, aerial",
             "size": "small",
             "max_occupancy": 6,
             "cargo": 60,
             "rating": 5,
+            "reviewers": 75,
             "price": 1453,
             "features": [
                 "Multi-terrain mode for travel across all weather types.",
@@ -23,11 +24,12 @@ export const data = {
         {
             "id": "ds-2",
             "name": "aegis 7",
-            "sub_category": "none",
+            "category": "aerial",
             "size": "medium",
             "max_occupancy": 10,
             "cargo": 80,
             "rating": 4.63,
+            "reviewers": 92,
             "price": 2400,
             "features": [
                 "Moderate speed and range",
@@ -41,11 +43,12 @@ export const data = {
         {
             "id": "sb-3",
             "name": "tetrapod",
-            "sub_category": "ground",
+            "category": "ground, aerial",
             "size": "medium",
             "max_occupancy": 5,
             "cargo": 90,
             "rating": 4.46,
+            "reviewers": 48,
             "price": 2800,
             "features": [
                 "Above medium cargo capacity",
@@ -61,11 +64,12 @@ export const data = {
         {
             "id": "dm-4",
             "name": "novik",
-            "sub_category": "ground",
+            "category": "ground, aerial",
             "size": "large",
             "max_occupancy": 10,
             "cargo": 100,
             "rating": 4.81,
+            "reviewers": 71,
             "price": 3125,
             "features": [
                 "Large cargo plus amenities",
@@ -79,11 +83,12 @@ export const data = {
         {
             "id": "dm-5",
             "name": "thira",
-            "sub_category": "none",
+            "category": "aerial",
             "size": "large",
             "max_occupancy": 12,
             "cargo": 120,
             "rating": 4.86,
+            "reviewers": 60,
             "price": 7125,
             "features": [
                 "Large cargo hold with spacious bathrooms, showers, and kitchen",
@@ -99,12 +104,13 @@ export const data = {
         },
         {
             "id": "me-6",
-            "name": "liari",
-            "sub_category": "aquatic, ground",
+            "name": "liara",
+            "category": "aquatic, ground, aerial",
             "size": "small",
             "max_occupancy": 4,
             "cargo": 50,
             "rating": 5,
+            "reviewers": 42,
             "price": 1450,
             "features": [
                 "Sonar navigation system",
@@ -120,11 +126,12 @@ export const data = {
         {
             "id": "me-7",
             "name": "garrus",
-            "sub_category": "aerial, ground",
+            "category": "ground, aerial",
             "size": "medium",
             "max_occupancy": 6,
             "cargo": 50,
             "rating": 4.89,
+            "reviewers": 33,
             "price": 2050,
             "features": [
                 "Hull self-repair system",
@@ -138,11 +145,12 @@ export const data = {
         {
             "id": "me-8",
             "name": "saren",
-            "sub_category": "aerial",
+            "category": "aerial",
             "size": "small",
             "max_occupancy": 4,
             "cargo": 50,
             "rating": 4.94,
+            "reviewers": 29,
             "price": 3050,
             "features": [
                 "Speed-tuned engine",
@@ -158,12 +166,13 @@ export const data = {
         },
         {
             "id": "ds-9",
-            "name": "ishimaru",
-            "sub_category": "aerial",
+            "name": "ishimura",
+            "category": "aerial",
             "size": "x-large",
             "max_occupancy": 20,
             "cargo": 180,
             "rating": 4.83,
+            "reviewers": 17,
             "price": 15500,
             "features": [
                 "Maximum cargo and occupancy",
@@ -187,11 +196,12 @@ export const data = {
         {
             "id": "sb-10",
             "name": "iberis",
-            "sub_category": "aerial",
+            "category": "aerial",
             "size": "small",
             "max_occupancy": 5,
             "cargo": 50,
             "rating": 4.5,
+            "reviewers": 106,
             "price": 1299,
             "features": [
                 "Pretty average honestly."
@@ -210,7 +220,7 @@ TEMPLATE
         {
         "id": 1,
         "name": "NameHere",
-        "sub_category": "(Ground, Aquatic)",
+        "category": "(Ground, Aquatic)",
         "size": "(small/medium/large)",
         "occupancy":
             -small  -> 4-6 persons (4-6 people, basic supplies, and a small bathroom)
