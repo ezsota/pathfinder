@@ -2,8 +2,8 @@
 export const craftData = {
     "spacecrafts": [
         {
-            "id": "me-1",
-            "name": "shepard",
+            "id": "ds-1",
+            "name": "aegis 7",
             "category": "ground, aerial",
             "size": "small",
             "max_occupancy": 6,
@@ -22,8 +22,8 @@ export const craftData = {
             "max_speed": 1
         },
         {
-            "id": "ds-2",
-            "name": "aegis 7",
+            "id": "ksp-2",
+            "name": "kerbal",
             "category": "aerial",
             "size": "medium",
             "max_occupancy": 10,
@@ -119,7 +119,7 @@ export const craftData = {
                 "Phased-array interplanetary telecommunication system",
                 "Reinforced zitanium hull"
             ],
-            "description": "A small, highly engineered craft built for aquatic and smooth-terrain ground travel, featuring advanced sensing and telecommunication arrays, emergencylife-support, a lab, and a zitanium-reinforced hull.",
+            "description": "A small, highly engineered craft built for aquatic and smooth-terrain ground travel, featuring advanced sensors and telecommunication arrays, emergency life-support, a lab, and a zitanium-reinforced hull.",
             "max_range": "100 million",
             "max_speed": 1
         },

@@ -12,9 +12,11 @@
 
 import { useState, useEffect, createContext, useContext } from "react";
 
+// Empty container for auth data:
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
+    // Re-render triggered on state change -> AuthContext.Provider updates -> AuthContext updates
     const [user, setUser] = useState(null);
 
     useEffect(() => {
@@ -43,3 +45,6 @@ export function AuthProvider({ children }) {
         </AuthContext.Provider>
     );
 };
+
+// Export authentication data to other components (better reusability and encapsulation):
+export const useAuth = () => useContext(AuthContext);

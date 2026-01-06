@@ -1,9 +1,12 @@
 // Displays: thumbnail, name, rating, price, category (displays on craftlistings.jsx)
-// props come from CraftListings.jsx
+/*
 
+    - props come from CraftListings.jsx
+    - <Link> appends craft id to URL -> CraftDetails.jsx utilizes useParams() hook to display details
+
+*/
 import { Link } from "react-router-dom";
 import imgSmall from '../assets/placeholderCraft_sm.png';
-import imgRegular from '../assets/placeholderCraft.png';
 import starImg from '../assets/star.svg';
 import currency from '../assets/currency.svg';
 

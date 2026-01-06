@@ -1,7 +1,36 @@
-// display this page when user logs out as well, change body content message "successfully logged out"
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
 
 export default function UserLogin() {
-    return(
-        <h1>The login page.</h1>
+    const [email, setEmail] = useState("");
+    // get login from custom hook in AuthContext.jsx
+    const { login } = useAuth();
+    const navigate = useNavigate();
+    // useLocation() used to inspect and get info from the current URL (location)
+    const location = useLocation();
+    // Optional chaining to get id from state, if undefined then id will be set to undefined for error handling
+    const craftId = location.state?.craftId;
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        // use login function from useAuth custom hook
+        login(email);
+        navigate(
+            craftId ? `/user/reservations/new?craft=${craftId}` : "/user/reservations"
+        );
+    };
+
+    // Used a form since the main action is a submit:
+    return (
+        <form onSubmit={handleSubmit}>
+            <h1>Login</h1>
+            <input 
+                type="email"
+                requiredvalue={email}
+                onChange={event => setEmail(event.target.value)} 
+            />
+            <button className="btn btn-primary">Login</button>
+        </form>
     );
 };
