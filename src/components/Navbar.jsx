@@ -8,7 +8,7 @@ export default function Navbar() {
     const { user, logout } = useAuth();
     const navigate = useNavigate();
     
-    const linkToggler = ( {isActive} ) => isActive ? "nav-link active" : "nav-link";
+    const linkToggler = ( {isActive} ) => isActive ? "nav-link active" : "nav-link text-black";
 
     function handleLogout() {
         logout();
@@ -16,7 +16,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="nav gap-3">
+        <nav className="nav gap-3 bg-midgray">
             <NavLink to="/" end className={linkToggler}>
                 Home
             </NavLink>

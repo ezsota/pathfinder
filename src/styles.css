@@ -13,7 +13,16 @@ h1 {
   font-style: normal;
 }
 
-.manrope-m {
+.manrope-m ,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav,
+footer,
+button,
+input {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -35,7 +44,7 @@ h1 {
 }
 
 /* GENERAL */
-* {
+*, html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -60,18 +69,73 @@ input {
   cursor: pointer;
 }
 
-/* APP */
-
-h1 {
-  color: red;
+button {
+  border: 0px;
 }
 
+/* CARDS */
 .card-body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+/* BACKGROUNDS */
+.bg-purple {
+  background-color: #5B64A0;
+}
+
+.bg-red {
+  background-color: #FF1400;
+}
+
+.bg-darkblue {
+  background-color: rgb(0, 6, 50);
+}
+
+.bg-lightgray {
+  background-color: #F5F7F9;
+}
+
+.bg-midgray {
+  background-color: #C9CACC;
+}
+
+.bg-darkgray {
+  background-color: #999999;
+}
+
+.bg-darkergray {
+  background-color: #333333;
+}
+
+/* TEXT */
+.text-red,
 .nav-link.active {
-  color: red;
+  color: #FF1400;
+}
+
+.text-black {
+  color: #333333;
+}
+
+.text-purple {
+  color: #5B64A0;
+}
+
+.text-white {
+  color: #F5F7F9;
+}
+
+/* LINKS / HOVER */
+.no-underline {
+    text-decoration: none;
+}
+
+.darkred-hover:hover {
+  background-color: #D71200;
+}
+
+.darkpurple-hover:hover {
+  background-color: #4A5283;
 }

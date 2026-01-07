@@ -4,6 +4,18 @@ export default function Banner() {
     console.log('components/Banner.jsx loaded');
 
     return (
-        <h1>Banners go here</h1>
+        <div className="bg-darkblue">
+            <h1 className="p-2 py-sm-5 px-sm-2 text-red">PATHFINDER</h1>
+        </div>
     );
 };
+
+/*
+===============
+BOOTSTRAP NOTES
+===============
+    ** STYLE PRECEDENCE -> classes take precedence from L to R -> "p-sm-5 p-1" will set padding to 5 
+        regardless of the screen and "p-sm-1"m BS cascades L to R.
+    
+    ** p-sm-* -> applies padding from small breakpoint and up (not small screens only)
+*/
