@@ -21,10 +21,10 @@ export default function CraftDetails() {
     function handleReservation() {
         if (!user) {
             // send craft id state, using useLocation hook, to UserLogin.jsx (preserves users action)
-            navigate("/login", { state: { craftId: id } });
+            navigate("/login", { state: { craftName: craft.name , craftId: id } });
         } else {
             // query string (?) used to inject craft id into URL
-            navigate(`/user/reservations/new?craft=${id}`);
+            navigate(`/user/reservations/new?craft=${id}`, { state: { craftName: craft.name } });
         }
     };
 

@@ -8,7 +8,7 @@ export default function ReservationsList(props) {
         <section>
             <ul>
                 {props.reservations.map(reservation => (
-                    <li key={reservation.id}>{reservation.craftId}</li>
+                    <li key={reservation.id}>{reservation.craftName}{reservation.craftId}</li>
                 ))}
             </ul>
         </section>

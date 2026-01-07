@@ -1,6 +1,6 @@
 /* FONTS */
 .audiowide,
-h1  {
+h1 {
   font-family: "Audiowide", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -63,11 +63,15 @@ input {
 /* APP */
 
 h1 {
-    color: red;
+  color: red;
 }
 
 .card-body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.nav-link.active {
+  color: red;
 }

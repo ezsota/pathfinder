@@ -1,5 +1,7 @@
 // user details page: name, username, email, password, address, active rentals (make all editable)
 
+import { useAuth } from "../context/AuthContext.jsx";
+
 export default function UserProfile() {
     console.log('pages/UserProfile.jsx loaded')
     
