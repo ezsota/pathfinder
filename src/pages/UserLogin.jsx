@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 
 export default function UserLogin() {
+    console.log('pages/UserLogin.jsx loaded')
+
     const [email, setEmail] = useState("");
     // get login from custom hook in AuthContext.jsx
     const { login } = useAuth();
@@ -25,10 +27,13 @@ export default function UserLogin() {
     return (
         <form onSubmit={handleSubmit}>
             <h1>Login</h1>
-            <input 
+            <input
+                name="email"
                 type="email"
                 requiredvalue={email}
-                onChange={event => setEmail(event.target.value)} 
+                onChange={event => setEmail(event.target.value)}
+                autoComplete="off"
+                placeholder="example@domain.com"
             />
             <button className="btn btn-primary">Login</button>
         </form>

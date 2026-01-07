@@ -1,8 +1,16 @@
 // view your reservations from user profile
 // Browsing is public. Booking is authenticated.
 
-export default function ReservationsList() {
+export default function ReservationsList(props) {
+    console.log('components/ReservationsList.jsx loaded')
+
     return (
-        <h2>This is the new reservations checkout page for authed users.</h2>
+        <section>
+            <ul>
+                {props.reservations.map(reservation => (
+                    <li key={reservation.id}>{reservation.craftId}</li>
+                ))}
+            </ul>
+        </section>
     );
 };

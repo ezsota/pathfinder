@@ -5,11 +5,12 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
 export default function PublicLayout() {
+    console.log('layouts/PublicLayout.jsx loaded');
+
     return (
         <>
             <Navbar />
             <main className="container mt-4">
-                <p>Public Layout: The site layout before users are authorized.</p>
                 <Outlet />
             </main>
             <Footer />

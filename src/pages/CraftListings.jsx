@@ -4,6 +4,8 @@ import { craftData } from "../data/spacecrafts.js";
 import CraftTile from "../components/CraftTile.jsx";
 
 export default function CraftListings() {
+    console.log('pages/CraftListings.jsx loaded');
+
     return (
         <section>
             <header>

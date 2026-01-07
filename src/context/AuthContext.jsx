@@ -10,12 +10,16 @@
     AuthProvider is wraps around <BrowserRouter> in index.jsx to allows authenticaton management logic to be accessed across the app using AuthContext below
 */
 
+// AuthContext manages authentication state (ID Database) | ProtectedRoute manages routing decisions (Security Gatekeeper) -> separate responsibilites
+
 import { useState, useEffect, createContext, useContext } from "react";
 
 // Empty container for auth data:
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
+    console.log('AuthProvider({ children }) loaded');
+
     // Re-render triggered on state change -> AuthContext.Provider updates -> AuthContext updates
     const [user, setUser] = useState(null);
 

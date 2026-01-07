@@ -7,6 +7,8 @@ import imgRegular from '../assets/placeholderCraft.png';
 
 
 export default function CraftDetails() {
+    console.log('pages/CraftDetails.jsx loaded');
+
 
     // getParams() gets id from url (via CraftTile.jsx <Link>)
     const { id } = useParams();

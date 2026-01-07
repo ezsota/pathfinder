@@ -19,7 +19,7 @@ import UserLayout from "./layouts/UserLayout.jsx";
 import Home from "./pages/Home";
 import CraftDetails from "./pages/CraftDetails.jsx";
 import CraftListings from "./pages/CraftListings.jsx";
-import NewReservation from "./pages/NewReservation.jsx";
+import NewReservation from './pages/NewReservation.jsx';
 import UserLogin from "./pages/UserLogin.jsx";
 import UserProfile from "./pages/UserProfile.jsx";
 import UserReservations from "./pages/UserReservations.jsx";
