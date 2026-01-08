@@ -5,15 +5,16 @@ import { useAuth } from "../context/AuthContext.jsx";
 
 export default function Navbar() {
     console.log('components/Navbar.jsx loaded')
+    
     const { user, logout } = useAuth();
     const navigate = useNavigate();
-    
-    const linkToggler = ( {isActive} ) => isActive ? "nav-link active" : "nav-link text-black";
 
     function handleLogout() {
         logout();
         navigate("/");
     };
+
+    const linkToggler = ( {isActive} ) => isActive ? "nav-link active" : "nav-link text-black";
 
     return (
         <nav className="nav gap-3 bg-midgray">

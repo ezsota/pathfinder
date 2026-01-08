@@ -1,11 +1,14 @@
 // user details page: name, username, email, password, address, active rentals (make all editable)
 
-import { useAuth } from "../context/AuthContext.jsx";
+import ProfileItems from "../components/ProfileItems.jsx";
 
 export default function UserProfile() {
     console.log('pages/UserProfile.jsx loaded')
-    
+
     return (
-        <h1>The user profile page.</h1>
+        <header>
+            <h1 className="border-bottom pb-4">User Profile</h1>
+            <ProfileItems />
+        </header>
     );
 };

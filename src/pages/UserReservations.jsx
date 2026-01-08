@@ -2,7 +2,7 @@
 // Browsing is public. Booking is authenticated.
 
 import { useAuth } from "../context/AuthContext.jsx";
-import ReservationList from "../components/ReservationsList.jsx";
+import ReservationList from "../components/ReservationList.jsx";
 
 export default function UserReservations() {
     console.log('pages/UserReservations.jsx loaded')
@@ -12,12 +12,12 @@ export default function UserReservations() {
 
     // grab only reservations that match current authed user
     const userReservations = storedReservations.filter(
-        reservation => reservation.userID === user.id
-    ); 
+        res => res.userId == user.id
+    );
     
     return (
         <section>
-            <h1>Current Reservations</h1>
+            <h1 className="border-bottom pb-4">Current Reservations</h1>
             <ReservationList reservations={userReservations} />
         </section>
     );

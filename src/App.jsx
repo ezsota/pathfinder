@@ -37,11 +37,11 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/listings" element={<CraftListings />} />
           <Route path="/listings/:id" element={<CraftDetails />} />
-          {/* <Route path="/login" element={<UserLogin />} /> */}
+          <Route path="/login" element={<UserLogin />} />
           <Route path="/error" element={<ErrorDisplay />} />
         </Route>
 
-        <Route path="/login" element={<UserLogin />} />
+        {/* <Route path="/login" element={<UserLogin />} /> */}
 
         <Route path="/user" element={
           <ProtectedRoute>
