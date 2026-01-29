@@ -25,12 +25,15 @@ export const craftData = {
             "reviewers": 75,
             "price": 1453,
             "features": [
-                "Multi-terrain mode for travel across all weather types.",
-                "Small restroom with sink and toilet",
-                "Oxygen and water generation system",
-                "Emergency track and rescue system"
+                "Retractable wings for easy land travel",
+                "Rear and underbody thrusters",
+                "Multi-terrain drivetrain",
+                "Autonomous track and rescue software",
+                "Emergency oxygen supply system",
+                "Water generation system",
+                "Single person lavatory"
             ],
-            "description": "A compact, multi-terrain vehicle that excels on both land and air, featuring retractable wings, rear and underbody propulsion thrusters, single restroom, advanced life-support amenities, and built-in emergency response capabilities.",
+            "description": "A multi-purpose spacecraft exceling at land and air navigation that is both compact and packed with features.",
             "max_range": "90 million",
             "max_speed": 1,
             "image": chiefImg
