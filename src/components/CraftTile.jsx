@@ -19,14 +19,14 @@ export default function CraftTile(props) {
                 <header className="card-header">
                     <span>
                         <img src={props.craft.image} className="img-fluid" alt={`Image of the spacecraft ${props.craft.name}`} />
-                        <h3 className="card-title">{props.craft.name}</h3>
+                        <h3 className="card-title">{props.craft.name.charAt(0).toUpperCase() + props.craft.name.slice(1)}</h3>
                     </span>
                     <p className="card-text">{props.craft.rating}<img src={starImg} alt="Image of a star for rating" />({props.craft.reviewers} reviews)</p>
                     <p className="card-text"><img src={currency} alt="Fake currency symbol" />{props.craft.price}/week</p>
                 </header>
 
                 <div className="card-body">
-                    <p className="card-text">{props.craft.category}</p>
+                    <p className="card-text">Type: {props.craft.category}</p>
                     <Link to={`/listings/${props.craft.id}`} className="btn btn-primary">
                         More Details
                     </Link>

@@ -149,6 +149,12 @@ button {
   padding: 5px;
 }
 
+/* IMAGES */
+#prof-image {
+  width: 150px;
+
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
   .sidenav {

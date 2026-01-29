@@ -1,5 +1,5 @@
 // spacecraft data
-import aegisImg from "../assets/aegis.png";
+import chiefImg from "../assets/chief.png";
 import kerbalImg from "../assets/kerbal.png";
 import tetrapodImg from "../assets/tetrapod.png";
 import aranImg from "../assets/aran.png";
@@ -15,8 +15,8 @@ import invaderImg from "../assets/invader.png";
 export const craftData = {
     "spacecrafts": [
         {
-            "id": "ds-1",
-            "name": "aegis-7",
+            "id": "hl-1",
+            "name": "chief",
             "category": "ground, aerial",
             "size": "small",
             "max_occupancy": 6,
@@ -33,7 +33,7 @@ export const craftData = {
             "description": "A compact, multi-terrain vehicle that excels on both land and air, featuring retractable wings, rear and underbody propulsion thrusters, single restroom, advanced life-support amenities, and built-in emergency response capabilities.",
             "max_range": "90 million",
             "max_speed": 1,
-            "image": aegisImg
+            "image": chiefImg
         },
         {
             "id": "ksp-2",

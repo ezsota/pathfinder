@@ -3,7 +3,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { craftData } from "../data/spacecrafts.js";
 import { useAuth } from "../context/AuthContext.jsx";
-import imgRegular from '../assets/placeholderCraft.png';
 
 
 export default function CraftDetails() {
@@ -21,17 +20,28 @@ export default function CraftDetails() {
     function handleReservation() {
         if (!user) {
             // send craft id state, using useLocation hook, to UserLogin.jsx (preserves users action)
-            navigate("/login", { state: { craftName: craft.name , craftId: id } });
+            navigate("/login", { state: { craftName: craft.name, craftId: id } });
         } else {
             // query string (?) used to inject craft id into URL
             navigate(`/user/reservations/new?craft=${id}`, { state: { craftName: craft.name } });
         }
     };
 
+    function handleBackNav() {
+        navigate(-1);
+    };
+
     return (
         <section>
-            <h1>{craft.name}</h1>
+            <h1>{craft.name.toUpperCase()}</h1>
+            <img src={craft.image} className="img-fluid" alt={`Image of spacecraft ${craft.name}`} />
             <p>{craft.description}</p>
+            <ul>
+                {craft.features.map((feat, index) => (
+                    <li key={`${craft.id}-feature-${index}`}>{feat}</li>
+                ))}
+            </ul>
+            <button className="btn btn-primary" onClick={handleBackNav}>&#8592; Back</button>
             <button className="btn btn-success" onClick={handleReservation}>
                 Reserve Now
             </button>
