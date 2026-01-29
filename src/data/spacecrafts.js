@@ -1,9 +1,22 @@
 // spacecraft data
+import aegisImg from "../assets/aegis.png";
+import kerbalImg from "../assets/kerbal.png";
+import tetrapodImg from "../assets/tetrapod.png";
+import aranImg from "../assets/aran.png";
+import thiraImg from "../assets/thira.png";
+import liaraImg from "../assets/liara.png";
+import novikImg from "../assets/novik.png";
+import sarenImg from "../assets/saren.png";
+import ishimuraImg from "../assets/ishimura.png";
+import iberisImg from "../assets/iberis.png";
+import spireImg from "../assets/spire.png";
+import invaderImg from "../assets/invader.png";
+
 export const craftData = {
     "spacecrafts": [
         {
             "id": "ds-1",
-            "name": "aegis 7",
+            "name": "aegis-7",
             "category": "ground, aerial",
             "size": "small",
             "max_occupancy": 6,
@@ -17,9 +30,10 @@ export const craftData = {
                 "Oxygen and water generation system",
                 "Emergency track and rescue system"
             ],
-            "description": "A compact, multi-terrain vehicle that excels on both land and air, offering necessary restroom facilities, advanced life-support amenities, and built-in emergency capabilities.",
+            "description": "A compact, multi-terrain vehicle that excels on both land and air, featuring retractable wings, rear and underbody propulsion thrusters, single restroom, advanced life-support amenities, and built-in emergency response capabilities.",
             "max_range": "90 million",
-            "max_speed": 1
+            "max_speed": 1,
+            "image": aegisImg
         },
         {
             "id": "ksp-2",
@@ -38,7 +52,8 @@ export const craftData = {
             ],
             "description": "A medium-sized aerial craft balancing speed, range, and crew capacity, ideal for missions that require moderate cargo and passenger loads without ground capability.",
             "max_range": "900 million",
-            "max_speed": 2
+            "max_speed": 2,
+            "image": kerbalImg
         },
         {
             "id": "sb-3",
@@ -57,13 +72,14 @@ export const craftData = {
                 "Above moderate range",
                 "Rough-terrain travel ready"
             ],
-            "description": "A versatile medium craft that transports moderate cargo across rough terrain and air, supporting a small crew with extended range for exploratory missions.",
+            "description": "A versatile medium craft that transports moderate cargo across rough terrain and air, featuring retractable 360-degree propulsion thrusters, supporting a small crew with extended range for exploratory missions.",
             "max_range": "1 billion",
-            "max_speed": 1
+            "max_speed": 1,
+            "image": tetrapodImg
         },
         {
-            "id": "dm-4",
-            "name": "novik",
+            "id": "mp-4",
+            "name": "aran",
             "category": "ground, aerial",
             "size": "large",
             "max_occupancy": 10,
@@ -76,14 +92,15 @@ export const craftData = {
                 "Moderate speed with long range",
                 "Land and air operation"
             ],
-            "description": "A large, long-range ground-air hybrid with ample cargo and crew spaces and onboard amenities, suited for heavy-load missions over vast distances.",
+            "description": "A large, long-range ground-air hybrid with ample cargo capacity, crew spaces, onboard amenities, and air lift suspension suited for heavy-load missions over vast distances.",
             "max_range": "2 billion",
-            "max_speed": 2
+            "max_speed": 2,
+            "image": aranImg
         },
         {
             "id": "dm-5",
             "name": "thira",
-            "category": "aerial",
+            "category": "ground, aerial",
             "size": "large",
             "max_occupancy": 12,
             "cargo": 120,
@@ -98,9 +115,10 @@ export const craftData = {
                 "Medical robot included",
                 "Armory container including plasma rifles and body armor (8 sets included)"
             ],
-            "description": "A top-tier large vessel offering maximum speed, extreme range, extensive cargo, and full-service facilities including labs, medical robots, and an armory, plus four glider bikes and weaponry for off-craft exploration.",
+            "description": "A top-tier large craft offering light-duty terrain wheels, maximum speed, extreme range, extensive cargo, and full-service facilities including labs, medical robots, and an armory, plus four glider bikes and weaponry for off-craft exploration.",
             "max_range": "3.5 billion",
-            "max_speed": 3
+            "max_speed": 3,
+            "image": thiraImg
         },
         {
             "id": "me-6",
@@ -121,11 +139,12 @@ export const craftData = {
             ],
             "description": "A small, highly engineered craft built for aquatic and smooth-terrain ground travel, featuring advanced sensors and telecommunication arrays, emergency life-support, a lab, and a zitanium-reinforced hull.",
             "max_range": "100 million",
-            "max_speed": 1
+            "max_speed": 1,
+            "image": liaraImg
         },
         {
-            "id": "me-7",
-            "name": "garrus",
+            "id": "dm-7",
+            "name": "novik",
             "category": "ground, aerial",
             "size": "medium",
             "max_occupancy": 6,
@@ -138,9 +157,10 @@ export const craftData = {
                 "Automatic long-range turret system",
                 "Long-distance scanning and autopilot"
             ],
-            "description": "A medium aerial-ground hybrid equipped with autonomous self-repair, a defensive turret, and scanning autopilot for quick, protected trips across varied terrain.",
+            "description": "A medium aerial-ground hybrid equipped with autonomous self-repair, a retractable defensive turret, and scanning autopilot for quick trips across varied terrain.",
             "max_range": "1.2 billion",
-            "max_speed": 3
+            "max_speed": 3,
+            "image": novikImg
         },
         {
             "id": "me-8",
@@ -162,12 +182,13 @@ export const craftData = {
             ],
             "description": "A nimble small aerial craft optimized for speed and agility, with thrust vectoring, robust collision avoidance, and a reinforced frame for high-stress maneuvers. Must have special qualifications to rent.",
             "max_range": "50 million",
-            "max_speed": 3.5
+            "max_speed": 3.5,
+            "image": sarenImg
         },
         {
             "id": "ds-9",
             "name": "ishimura",
-            "category": "aerial",
+            "category": "ground, aerial",
             "size": "x-large",
             "max_occupancy": 20,
             "cargo": 180,
@@ -189,9 +210,10 @@ export const craftData = {
                 "Backup emergency engine (reduces travel speed and power to amenities while in use)",
                 "Reinforced zitanium hull"
             ],
-            "description": "An extra-large aerial platform offering the highest cargo and passenger capacity, complete with defensive systems, medical and research facilities, autonomous landing, onboard excursion vehicles and more. Perfect for long voyages in dangerous areas.",
+            "description": "An extra-large aerial platform offering the highest cargo and passenger capacity, complete with defensive systems, medical and research facilities, autonomous landing, light-duty terrain travel, onboard excursion vehicles and more. Perfect for long voyages in dangerous areas.",
             "max_range": "4 billion",
-            "max_speed": 2
+            "max_speed": 2,
+            "image": ishimuraImg
         },
         {
             "id": "sb-10",
@@ -206,9 +228,53 @@ export const craftData = {
             "features": [
                 "Pretty average honestly."
             ],
-            "description": "A modest small aerial craft with average performance across speed, range, and cargo, suitable for routine missions.",
+            "description": "A modest small aerial craft with average performance across speed, range, and cargo, suitable for routine navigation.",
             "max_range": "1 billion",
-            "max_speed": 1
+            "max_speed": 1,
+            "image": iberisImg
+        },
+        {
+            "id": "mp-11",
+            "name": "spire",
+            "category": "liquid, ground, aerial",
+            "size": "small",
+            "max_occupancy": 4,
+            "cargo": 50,
+            "rating": 5,
+            "reviewers": 28,
+            "price": 10200,
+            "features": [
+                "Sonar navigation system",
+                "Backup life-support system with onboard life perserve suits",
+                "Research laboratory space",
+                "Phased-array interplanetary telecommunication system",
+                "Reinforced insulated zitanium hull",
+                "Extreme temperature suppression system",
+                "Specialized propulsion system",
+                "Melt and fire resistance components"
+            ],
+            "description": "A small, highly engineered craft built for extremely high temperature terrain, featuring advanced sensors and telecommunication arrays, emergency life-support, a lab, and a zitanium-reinforced insulated hull with temperature management.",
+            "max_range": "100 million",
+            "max_speed": 1,
+            "image": spireImg
+        },
+        {
+            "id": "zim-12",
+            "name": "invader",
+            "category": "aerial",
+            "size": "small",
+            "max_occupancy": 5,
+            "cargo": 50,
+            "rating": 4.7,
+            "reviewers": 166,
+            "price": 1999,
+            "features": [
+                "Moderate range and speed performance upgrades"
+            ],
+            "description": "A nimble small aerial craft with above average performance across speed, range, and cargo, suitable for simple but routine but agile navigation.",
+            "max_range": "900 million",
+            "max_speed": 2,
+            "image": invaderImg
         }
     ]
 };

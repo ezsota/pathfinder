@@ -31,29 +31,27 @@ import ErrorDisplay from "./components/ErrorDisplay.jsx";
 export default function App() {
   return (
 
-      <Routes>
-
-        <Route element={<PublicLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/listings" element={<CraftListings />} />
-          <Route path="/listings/:id" element={<CraftDetails />} />
-          <Route path="/login" element={<UserLogin />} />
-          <Route path="/error" element={<ErrorDisplay />} />
-        </Route>
-
-        {/* <Route path="/login" element={<UserLogin />} /> */}
-
-        <Route path="/user" element={
-          <ProtectedRoute>
-            <UserLayout />
-          </ProtectedRoute>
-        }>
-          <Route path="reservations" element={<UserReservations />} />
-          <Route path="reservations/new" element={<NewReservation />} />
-          <Route path="profile" element={<UserProfile />} />
-        </Route>
-
-      </Routes >
+    <Routes>
+      {/* PUBLIC ROUTES */}
+      <Route element={<PublicLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/listings" element={<CraftListings />} />
+        <Route path="/listings/:id" element={<CraftDetails />} />
+        <Route path="/error" element={<ErrorDisplay />} />
+      </Route>
+      {/* PUBLIC LOGIN ROUTE */}
+      <Route path="/login" element={<UserLogin />} />
+      {/* PROTECTED ROUTES */}
+      <Route path="/user" element={
+        <ProtectedRoute>
+          <UserLayout />
+        </ProtectedRoute>
+      }>
+        <Route path="reservations" element={<UserReservations />} />
+        <Route path="reservations/new" element={<NewReservation />} />
+        <Route path="profile" element={<UserProfile />} />
+      </Route>
+    </Routes >
   );
 };
 

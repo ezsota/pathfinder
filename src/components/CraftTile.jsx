@@ -6,7 +6,6 @@
 
 */
 import { Link } from "react-router-dom";
-import imgSmall from '../assets/placeholderCraft_sm.png';
 import starImg from '../assets/star.svg';
 import currency from '../assets/currency.svg';
 
@@ -19,7 +18,7 @@ export default function CraftTile(props) {
             <div className="card">
                 <header className="card-header">
                     <span>
-                        <img src={imgSmall} alt="Placeholder image of a spaceship" />
+                        <img src={props.craft.image} className="img-fluid" alt={`Image of the spacecraft ${props.craft.name}`} />
                         <h3 className="card-title">{props.craft.name}</h3>
                     </span>
                     <p className="card-text">{props.craft.rating}<img src={starImg} alt="Image of a star for rating" />({props.craft.reviewers} reviews)</p>
