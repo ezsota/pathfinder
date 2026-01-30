@@ -274,7 +274,7 @@ export const craftData = {
             "features": [
                 "Moderate range and speed performance upgrades"
             ],
-            "description": "A nimble small aerial craft with above average performance across speed, range, and cargo, suitable for simple but routine but agile navigation.",
+            "description": "A nimble small aerial craft with above average performance across speed, range, and cargo, suitable for simple but routine and agile navigation.",
             "max_range": "900 million",
             "max_speed": 2,
             "image": invaderImg
