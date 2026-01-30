@@ -12,6 +12,7 @@ export default function UserNavbar() {
     navigate("/");
   };
 
+  // NavLink manages isActive based on currentUrl
   const linkToggler = ({ isActive }) => isActive ? "nav-link active" : "nav-link text-white";
 
   return (

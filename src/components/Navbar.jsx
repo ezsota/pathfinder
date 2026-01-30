@@ -14,30 +14,31 @@ export default function Navbar() {
         navigate("/");
     };
 
+    // NavLink manages isActive based on currentUrl
     const linkToggler = ( {isActive} ) => isActive ? "nav-link active" : "nav-link text-black";
 
     return (
-        <nav className="nav gap-3 bg-midgray">
+        <nav className="nav gap-0 gap-md-3 pe-3 bg-midgray">
             <NavLink to="/" end className={linkToggler}>
                 Home
             </NavLink>
             <NavLink to="/listings" className={linkToggler}>
                 Spacecrafts
             </NavLink>
-
+            
             {user
                 ? (
                     <>
                         <NavLink to="/user/profile" className={linkToggler}>
                             Account
                         </NavLink>
-                        <button className="btn btn-primary nav-link" onClick={handleLogout}>
+                        <button className="btn log-offon-btns nav-link ms-auto text-white bg-darkblue darkred-hover" onClick={handleLogout}>
                             Logout
                         </button>
                     </>
                 )
                 : (
-                    <NavLink to="/login" className={linkToggler}>
+                    <NavLink to="/login" className={`btn log-offon-btns ms-auto text-white bg-darkblue darkpurple-hover`}>
                         Login
                     </NavLink>
                 )

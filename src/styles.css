@@ -94,6 +94,10 @@ button {
   background-color: #FF1400;
 }
 
+.bg-lightred {
+  background-color: #ffcec9;
+}
+
 .bg-darkblue {
   background-color: rgb(0, 6, 50);
 }
@@ -145,6 +149,12 @@ button {
   background-color: #4A5283;
 }
 
+.log-offon-btns.ms-auto {
+  width: 65px;
+  padding: 0;
+  align-self: center;
+}
+
 /* LISTS */
 .profile-list li {
   padding: 5px;
@@ -163,6 +173,10 @@ button {
   max-width: 500px;
 }
 
+#verify-box {
+  width: 50%;
+}
+
 /* IMAGES */
 #prof-image {
   width: 150px;
@@ -177,6 +191,20 @@ button {
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 450px) {
+  .log-offon-btns.ms-auto {
+    margin-left: 0 !important;
+    width: 65px;
+    padding: 0;
+    align-self: center;
+  }
+
+  #verify-box {
+    width: 100%;
+  }
+
+}
+
 @media (min-width: 768px) {
   .sidenav {
     min-height: 100vh;
