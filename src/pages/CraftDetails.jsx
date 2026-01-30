@@ -33,18 +33,18 @@ export default function CraftDetails() {
     };
 
     return (
-        <article className="container">
+        <article className="container mb-4">
             <div className="row g-3 align-items-stretch">
                 {/* LEFT PANEL */}
                 <div className="col-12 col-md-6 d-flex">
                     <div className="d-flex flex-column w-100 border rounded p-3 text-center justify-content-evenly">
                         <header>
                             <h1>{craft.name.toUpperCase()}</h1>
-                            <p>Category: {craft.category}</p>
-                            <img src={craft.image} className="img-fluid rounded" alt={`Image of spacecraft ${craft.name}`} />
+                            <h2 className="fs-6">Category: {craft.category}</h2>
+                            <img src={craft.image} className="w-100 rounded" alt={`Image of spacecraft ${craft.name}`} />
                         </header>
-                        <section className="bg-midgray my-2 rounded p-2">
-                            <ul className="list-unstyled d-flex justify-content-center gap-3 mb-1">
+                        <section className=" my-2 rounded p-0 w-100">
+                            {/* <ul className="list-unstyled d-flex justify-content-center gap-3 mb-1">
                                 <li>Size: {craft.size}</li>
                                 <li>Occupancy: {craft.max_occupancy}</li>
                                 <li>Cargo: {craft.cargo}cbm</li>
@@ -52,7 +52,29 @@ export default function CraftDetails() {
                             <ul className="list-unstyled d-flex justify-content-center gap-3 mb-0">
                                 <li>Range: {craft.max_range} miles</li>
                                 <li>Speed: {craft.max_speed} Mmph</li>
-                            </ul>
+                            </ul> */}
+                            <div className="table-responsive">
+                                <table className="table table-sm table-secondary table-striped rounded-table">
+                                    <thead>
+                                        <tr>
+                                            <th className="vertical-header text-wrap">Size</th>
+                                            <th className="vertical-header text-wrap">Occupants</th>
+                                            <th className="vertical-header text-wrap">Cargo</th>
+                                            <th className="vertical-header text-wrap">Range</th>
+                                            <th className="vertical-header text-wrap">Speed</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{craft.size}</td>
+                                            <td>{craft.max_occupancy}</td>
+                                            <td>{craft.cargo}cbm</td>
+                                            <td>{craft.max_range}</td>
+                                            <td>{craft.max_speed}Mmph</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -61,8 +83,8 @@ export default function CraftDetails() {
                     <div className="d-flex flex-column w-100 border rounded p-3">
                         <section className="flex-grow-1">
                             <h2 className="text-center">Features</h2>
-                            <p>{craft.description}</p>
-                            <ul className="li-deco-inside">
+                            <p className="text-center">{craft.description}</p>
+                            <ul className="li-deco-inside text-center">
                                 {craft.features.map((feat, index) => (
                                     <li key={`${craft.id}-feature-${index}`}>{feat}</li>
                                 ))}
@@ -70,17 +92,15 @@ export default function CraftDetails() {
                         </section>
                         <span className="d-flex flex-row justify-content-center w-100 gap-4">
                             <p>
-                                Rating:
-                                {craft.rating}/5
+                                Rating: {craft.rating}/5
                                 <img src={starImg} alt="Rating star image" />
                             </p>
                             <p>
-                                Price:
-                                <img src={currencyImg} alt="Currency image" />
+                                Price: <img src={currencyImg} alt="Currency image" />
                                 {craft.price}/week
                             </p>
                         </span>
-                        <footer className="d-flex gap-2 mt-auto">
+                        <footer className="d-flex gap-2 my-auto">
                             <button className="btn btn-primary w-50" onClick={handleBackNav}>← Back</button>
                             <button className="btn btn-success w-50" onClick={handleReservation}>Reserve →</button>
                         </footer>

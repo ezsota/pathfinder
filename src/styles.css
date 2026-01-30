@@ -169,6 +169,13 @@ button {
 
 }
 
+/* TABLES */
+.rounded-table {
+  border-radius: 5px;
+  overflow: hidden;
+  border: hidden;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
   .sidenav {
