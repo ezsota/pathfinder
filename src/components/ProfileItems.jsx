@@ -4,20 +4,23 @@ import { useAuth } from "../context/AuthContext";
 import profAvatar from "../assets/profile_avatar.svg";
 
 export default function ProfileItems() {
-    console.log('components/ProfileItems.jsx loaded');
-
     const navigate = useNavigate();
     const { user, deleteUsr } = useAuth();
 
     const verifyTerm = "delete my account";
-    const [usrCheck, setUsrCheck] = useState("");
-    const [displayVerification, setDisplayVerification] = useState(false);
+    const [usrInput, setUsrInput] = useState("");
+    const [displayVerifyBox, setDisplayVerifyBox] = useState(false);
 
     function handleConfirmDelete() {
-        if (usrCheck === verifyTerm) {
+        if (usrInput === verifyTerm) {
             deleteUsr();
             navigate("/");
         }
+    };
+
+    function handleCancelDelete() {
+        setUsrInput("");
+        setDisplayVerifyBox(false);
     };
 
     return (
@@ -27,12 +30,13 @@ export default function ProfileItems() {
                 <li><strong>Id:</strong> {user.id}</li>
                 <li><strong>Email:</strong> {user.email}</li>
             </ul>
-            <button className="btn btn-danger" onClick={() => setDisplayVerification(true)}>Delete Account</button>
-            {displayVerification && (
+            <button className="btn btn-danger" onClick={() => setDisplayVerifyBox(true)}>Delete Account</button>
+            {displayVerifyBox && (
                 <aside className="mt-5 p-3 border border-danger bg-lightred" id="verify-box">
-                    <p>To verify deletion, please type: <strong>delete my account</strong></p>
-                    <input type="text" maxLength={17} value={usrCheck} onChange={(event) => setUsrCheck(event.target.value)}/>
-                    <button className="btn btn-danger m-2" onClick={handleConfirmDelete} disabled={usrCheck !== verifyTerm}>Confirm Deletion</button>
+                    <p>To confirm deletion, please type: <strong>delete my account</strong></p>
+                    <input type="text" maxLength={17} value={usrInput} onChange={(event) => setUsrInput(event.target.value)}/>
+                    <button className="btn btn-danger m-2" onClick={handleConfirmDelete} disabled={usrInput !== verifyTerm}>Confirm Deletion</button>
+                    <button className="btn btn-success m-2" onClick={handleCancelDelete}>Cancel Deletion</button>
                 </aside>
             )}
         </section>

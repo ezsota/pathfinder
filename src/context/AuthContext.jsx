@@ -1,50 +1,75 @@
 /*
-    React context provides global user authentication state:
-        - allows logon status
-        - blocks access (ProtectedRoute)
-        - filter/display reservations by user/id
-
-    crypto.randomUUID() -> uses the "crypto" module (native JS), using the "randomUUID" method, to simulate a real world user id creation.
-
-    {children} -> built-in React prop allowing pass/access to external nested data -> used here to pass the user data to the app for routing/rendering
-    AuthProvider is wraps around <BrowserRouter> in index.jsx to allows authenticaton management logic to be accessed across the app using AuthContext below
+=============================
+Mental Model for localStorage
+==============================
+localStorage = {
+  users: { [email]: user },
+  reservations: Reservation[],
+  currentUserEmail: string
+}
 */
-
-// AuthContext manages authentication state (ID Database) | ProtectedRoute manages routing decisions (Security Gatekeeper) -> separate responsibilites
-
 import { useState, useEffect, createContext, useContext } from "react";
 
-// Empty container for auth data:
+// Auth data container
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
     console.log('AuthProvider({ children }) loaded');
 
-    // Re-render triggered on state change -> AuthContext.Provider updates -> AuthContext updates
+    // Authed user state
     const [user, setUser] = useState(null);
+    // Historic users container || fallback
+    const users = JSON.parse(localStorage.getItem(("users")) || "{}");
 
+    // Check if account exists (email)
     useEffect(() => {
-        // Check for stored user on page loads, persists on reloads
-        const storedUser = localStorage.getItem("user");
-        if (storedUser) {
-            setUser(JSON.parse(storedUser));
+        // Get current email string
+        const sessionEmail = localStorage.getItem("currentUserEmail");
+        //if emails match set to historic user || fallback^
+        if (sessionEmail && users[sessionEmail]) {
+            setUser(users[sessionEmail]);
         }
     }, []);
 
     const login = (email) => {
-        // Creates/Stores user using email and crypto
-        const userData = { id: crypto.randomUUID(), email };
-        localStorage.setItem("user", JSON.stringify(userData));
+        let userData;
+
+        if (users[email]) {
+            userData = users[email];
+        } else {
+            userData = { id: crypto.randomUUID(), email };
+            users[email] = userData;
+            localStorage.setItem("users", JSON.stringify(users));
+        }
+
+        localStorage.setItem("currentUserEmail", email);
         setUser(userData);
     };
 
     const logout = () => {
+        localStorage.removeItem("currentUserEmail");
         setUser(null);
     };
 
     const deleteUsr = () => {
-        localStorage.removeItem("user");
-        setUser(null);
+        if (!user) return;
+        const email = user.email;
+        // User
+        const users = JSON.parse(localStorage.getItem("users")) || {};
+        delete users[email];
+        localStorage.setItem("users", JSON.stringify(users));
+        // User Reservation
+        const storedReservations = JSON.parse(localStorage.getItem("reservations")) || [];
+        const updatedReservations = storedReservations.filter(res => res.email !== user.email);
+        localStorage.setItem("reservations", JSON.stringify(updatedReservations));
+        // End session
+        logout();
+
+        //logs
+        console.log(email);
+        console.log(users);
+        console.log(storedReservations);
+        console.log(updatedReservations);
     };
 
     return (
@@ -56,3 +81,20 @@ export function AuthProvider({ children }) {
 
 // Export authentication data to other components (better reusability and encapsulation):
 export const useAuth = () => useContext(AuthContext);
+
+
+/*
+==================
+REACT/ROUTER NOTES
+===================
+    React context provides global user authentication state:
+        - allows logon status
+        - blocks access (ProtectedRoute)
+        - filter/display reservations by user/id
+
+    -crypto.randomUUID() -> uses the "crypto" module (native JS), using the "randomUUID" method, to simulate a real world user id creation.
+    -{children} -> built-in React prop allowing pass/access to external nested data -> used here to pass the user data to the app for routing/rendering
+    -AuthProvider wraps around <BrowserRouter> in index.jsx to allows authenticaton management logic to be accessed across the app using AuthContext
+    -AuthContext manages authentication state (ID Database) | ProtectedRoute manages routing decisions (Security Gatekeeper) -> separate responsibilites
+    -usrData change triggers re-render -> AuthContext.Provider/AuthContext update
+*/

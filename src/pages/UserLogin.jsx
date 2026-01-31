@@ -4,7 +4,6 @@ import { useAuth } from "../context/AuthContext.jsx";
 import IconLrg from "../assets/icon_lrg.svg";
 
 export default function UserLogin() {
-    console.log('pages/UserLogin.jsx loaded')
 
     const [email, setEmail] = useState("");
     // get login from custom hook in AuthContext.jsx

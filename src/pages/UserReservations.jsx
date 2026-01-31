@@ -18,7 +18,7 @@ export default function UserReservations() {
     return (
         <section>
             <h1 className="border-bottom pb-4">Current Reservations</h1>
-            <ReservationList reservations={userReservations} />
+            <ReservationList userReservations={userReservations} />
         </section>
     );
 };

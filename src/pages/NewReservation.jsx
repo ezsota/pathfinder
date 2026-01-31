@@ -29,6 +29,7 @@ export default function NewReservation() {
         reservations.push({
             id: crypto.randomUUID(),
             userId: user.id,
+            email: user.email,
             craftId,
             craftName,
             createdAt: Date.now()
