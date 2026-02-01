@@ -5,7 +5,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-darkblue">
-            <p className="text-purple m-0 py-2 ps-1 pe-2">This is the footer</p>
+            <p className="text-purple m-0 py-2 ps-3 pe-2">PATHFINDER &copy;4026</p>
         </footer>
     );
 };

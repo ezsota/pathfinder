@@ -1,5 +1,4 @@
 // public site navigation
-
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 

@@ -12,7 +12,7 @@ export default function PublicLayout() {
         <div className="d-flex flex-column min-vh-100">
             <Banner />
             <Navbar />
-            <main className="container-fluid pt-4 bg-lightgray flex-fill">
+            <main className="container-fluid bg-lightgray flex-fill p-0 m-0">
                 <Outlet />
             </main>
             <Footer />

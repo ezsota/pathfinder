@@ -11,7 +11,7 @@ export default function CraftListings() {
             <header>
                 <h1>Available Spacecraft Rentals</h1>
             </header>
-            <div className="row">
+            <div className="row px-1 px-md-3 px-lg-5 py-3">
                 {craftData.spacecrafts.map(craft => (
                     <CraftTile
                         key={craft.id}
