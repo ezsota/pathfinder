@@ -44,15 +44,6 @@ export default function CraftDetails() {
                             <img src={craft.image} className="w-100 rounded" alt={`Image of spacecraft ${craft.name}`} />
                         </header>
                         <section className=" my-2 rounded p-0 w-100">
-                            {/* <ul className="list-unstyled d-flex justify-content-center gap-3 mb-1">
-                                <li>Size: {craft.size}</li>
-                                <li>Occupancy: {craft.max_occupancy}</li>
-                                <li>Cargo: {craft.cargo}cbm</li>
-                            </ul>
-                            <ul className="list-unstyled d-flex justify-content-center gap-3 mb-0">
-                                <li>Range: {craft.max_range} miles</li>
-                                <li>Speed: {craft.max_speed} Mmph</li>
-                            </ul> */}
                             <div className="table-responsive">
                                 <table className="table table-sm table-secondary table-striped rounded-table">
                                     <thead>
