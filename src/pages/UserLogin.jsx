@@ -49,6 +49,8 @@ export default function UserLogin() {
                         onChange={event => setEmail(event.target.value)}
                         autoComplete="off"
                         placeholder="example@domain.com"
+                        minLength={5}
+                        maxLength={30}
                         required
                     />
                     <div className="d-grid gap-2 mt-5">
