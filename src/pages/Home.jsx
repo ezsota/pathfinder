@@ -49,7 +49,7 @@ export default function Home() {
                     justify-content-around
                     text-white
                     shadow-shrp-drkprp">
-                        <h2 className="audiowide">Find your path</h2>
+                        <h2 className="audiowide">Previous Rentals</h2>
                         <article
                             ref={carouselRef}
                             className="rounded carousel slide carousel-fade overflow-hidden"
@@ -67,7 +67,7 @@ export default function Home() {
                             </div>
                         </article>
                         <NavLink to="/listings" onClick={handleCtaClick}>
-                            <button className="bg-red text-white rounded darkpurple-hover py-3 fs-5 w-100 audiowide">View Available Rentals</button>
+                            <button className="bg-red text-white rounded darkpurple-hover py-3 fs-5 w-100 audiowide">Find your path &#8594;</button>
                         </NavLink>
                     </aside>
                     <div className="col-12 col-sm-11 col-md-10 col-lg-7 text-center p-0 mx-auto mt-lg-5 text-white">
