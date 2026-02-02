@@ -33,14 +33,17 @@ export default function CraftDetails() {
     };
 
     return (
-        <article className="container mb-4">
-            <div className="row g-3 align-items-stretch">
+        <article className="container my-2">
+            <header className="text-center my-2 my-md-3 my-lg-4">
+                <h1>Details</h1>
+            </header>
+            <div className="row g-3 align-items-stretch justify-content-center">
                 {/* LEFT PANEL */}
-                <div className="col-12 col-md-6 d-flex">
+                <div className="col-12 col-xl-6 d-flex">
                     <div className="d-flex flex-column w-100 border rounded p-3 text-center justify-content-evenly">
                         <header>
-                            <h1>{craft.name.toUpperCase()}</h1>
-                            <h2 className="fs-6">Category: {craft.category}</h2>
+                            <h2 className="fs-3 audiowide">{craft.name.toUpperCase()}</h2>
+                            <h3 className="fs-6">Category: {craft.category}</h3>
                             <img src={craft.image} className="w-100 rounded" alt={`Image of spacecraft ${craft.name}`} />
                         </header>
                         <section className=" my-2 rounded p-0 w-100">
@@ -70,7 +73,7 @@ export default function CraftDetails() {
                     </div>
                 </div>
                 {/* RIGHT PANEL */}
-                <div className="col-12 col-md-6 d-flex">
+                <div className="col-12 col-xl-6 d-flex">
                     <div className="d-flex flex-column w-100 border rounded p-3">
                         <section className="flex-grow-1">
                             <h2 className="text-center">Features</h2>

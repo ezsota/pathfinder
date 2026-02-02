@@ -9,7 +9,7 @@ export default function CraftListings() {
     return (
         <section>
             <header>
-                <h1>Available Spacecraft Rentals</h1>
+                <h1 className="mt-4 text-center">Available Spacecraft Rentals</h1>
             </header>
             <div className="row px-1 px-md-3 px-lg-5 py-3">
                 {craftData.spacecrafts.map(craft => (
