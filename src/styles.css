@@ -87,7 +87,7 @@ button {
 
 /* BACKGROUNDS */
 #welcome-banner {
-  background-image: url("./assets/welcome_banner.png");
+  background-image: url("./assets/welcome_banner.webp");
   background-position: center;
   background-size: cover;
   height: 100vh;

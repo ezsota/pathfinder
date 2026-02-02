@@ -1,16 +1,16 @@
 // spacecraft data
-import chiefImg from "../assets/chief.png";
-import kerbalImg from "../assets/kerbal.png";
-import tetrapodImg from "../assets/tetrapod.png";
-import aranImg from "../assets/aran.png";
-import thiraImg from "../assets/thira.png";
-import liaraImg from "../assets/liara.png";
-import novikImg from "../assets/novik.png";
-import sarenImg from "../assets/saren.png";
-import ishimuraImg from "../assets/ishimura.png";
-import iberisImg from "../assets/iberis.png";
-import spireImg from "../assets/spire.png";
-import invaderImg from "../assets/invader.png";
+import chiefImg from "../assets/chief.webp";
+import kerbalImg from "../assets/kerbal.webp";
+import tetrapodImg from "../assets/tetrapod.webp";
+import aranImg from "../assets/aran.webp";
+import thiraImg from "../assets/thira.webp";
+import liaraImg from "../assets/liara.webp";
+import novikImg from "../assets/novik.webp";
+import sarenImg from "../assets/saren.webp";
+import ishimuraImg from "../assets/ishimura.webp";
+import iberisImg from "../assets/iberis.webp";
+import spireImg from "../assets/spire.webp";
+import invaderImg from "../assets/invader.webp";
 
 export const craftData = {
     "spacecrafts": [

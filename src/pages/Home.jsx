@@ -1,7 +1,7 @@
 // starting page for both public and authenticated users -> featured spacecraft
-import card1 from "../assets/card1.png";
-import card2 from "../assets/card2.png";
-import card3 from "../assets/card3.png";
+import card1 from "../assets/card1.webp";
+import card2 from "../assets/card2.webp";
+import card3 from "../assets/card3.webp";
 import { NavLink } from "react-router-dom";
 import { Carousel } from "bootstrap"; // For BSCarousel init on render
 import { useEffect, useRef } from "react"; // For BSCarousel init on render

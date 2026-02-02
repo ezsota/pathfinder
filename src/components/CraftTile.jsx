@@ -18,7 +18,7 @@ export default function CraftTile(props) {
             <div className="card">
                 <header className="card-header">
                     <span>
-                        <img src={props.craft.image} className="w-100" alt={`Image of the spacecraft ${props.craft.name}`} />
+                        <img src={props.craft.image} loading="lazy" className="w-100" alt={`Image of the spacecraft ${props.craft.name}`} />
                         <h3 className="card-title">{props.craft.name.charAt(0).toUpperCase() + props.craft.name.slice(1)}</h3>
                     </span>
                     <p className="card-text">{props.craft.rating}<img src={starImg} alt="Image of a star for rating" />({props.craft.reviewers} reviews)</p>
