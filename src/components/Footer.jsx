@@ -4,8 +4,8 @@ export default function Footer() {
     console.log('components/Footer.jsx loaded')
 
     return (
-        <footer className="bg-darkblue">
-            <p className="text-purple m-0 py-2 ps-3 pe-2">PATHFINDER &copy;4026</p>
+        <footer className="bg-darkblue text-end">
+            <p className="text-purple m-0 py-2 pe-3">PATHFINDER &copy;4026</p>
         </footer>
     );
 };

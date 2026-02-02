@@ -43,7 +43,7 @@ export default function CraftDetails() {
                     <div className="d-flex flex-column w-100 border rounded p-3 text-center justify-content-evenly">
                         <header>
                             <h2 className="fs-3 audiowide">{craft.name.toUpperCase()}</h2>
-                            <h3 className="fs-6">Category: {craft.category}</h3>
+                            <h3 className="fs-6">Type: {craft.category}</h3>
                             <img src={craft.image} className="w-100 rounded" alt={`Image of spacecraft ${craft.name}`} />
                         </header>
                         <section className=" my-2 rounded p-0 w-100">

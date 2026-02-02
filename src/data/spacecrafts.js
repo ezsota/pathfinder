@@ -17,7 +17,7 @@ export const craftData = {
         {
             "id": "hl-1",
             "name": "chief",
-            "category": "ground, aerial",
+            "category": "ground, space",
             "size": "S",
             "max_occupancy": 6,
             "cargo": 60,
@@ -38,14 +38,14 @@ export const craftData = {
                 "Combat armor and rifle (x6)",
             ],
             "description": "A multi-purpose spacecraft, built like a warthog, and essentially indestructable no matter what you do to it.",
-            "max_range": "90Mmi",
+            "max_range": "500Mmi",
             "max_speed": 1,
             "image": chiefImg
         },
         {
             "id": "ksp-2",
             "name": "kerbal",
-            "category": "aerial",
+            "category": "space",
             "size": "M",
             "max_occupancy": 10,
             "cargo": 80,
@@ -61,17 +61,17 @@ export const craftData = {
                 "Automatic take-off/landing",
                 "Autonomous pilot crew"
             ],
-            "description": "A medium-sized aerial craft, with balanced features, ideal for safe trips across civilized space.",
-            "max_range": "900Mmi",
+            "description": "A medium-sized space craft, with balanced features, ideal for safe trips across civilized space.",
+            "max_range": "1Bmi",
             "max_speed": 2,
             "image": kerbalImg
         },
         {
             "id": "dm-3",
             "name": "thira",
-            "category": "ground, aerial",
+            "category": "ground, space",
             "size": "L",
-            "max_occupancy": 12,
+            "max_occupancy": 15,
             "cargo": 120,
             "rating": 4.86,
             "reviewers": 60,
@@ -95,7 +95,7 @@ export const craftData = {
         {
             "id": "mp-4",
             "name": "aran",
-            "category": "ground, aerial",
+            "category": "ground, space",
             "size": "L",
             "max_occupancy": 10,
             "cargo": 100,
@@ -121,7 +121,7 @@ export const craftData = {
         {
             "id": "sb-4",
             "name": "tetrapod",
-            "category": "ground, aerial",
+            "category": "ground, space",
             "size": "M",
             "max_occupancy": 5,
             "cargo": 90,
@@ -139,14 +139,14 @@ export const craftData = {
                 "Long-distance, roof deployable, scout drone"
             ],
             "description": "A versatile medium craft to transport moderate cargo and personnel across rough terrain on exploratory missions.",
-            "max_range": "1Bmi",
+            "max_range": "500Mmi",
             "max_speed": 1,
             "image": tetrapodImg
         },
         {
             "id": "me-6",
             "name": "liara",
-            "category": "aquatic, ground, aerial",
+            "category": "liquid, ground, space",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -166,15 +166,15 @@ export const craftData = {
                 "Environment adjustable propulsion system",
                 "Corrosion and frost resistant components"
             ],
-            "description": "A highly engineered craft, built for extremely low temperature, high pressure, aquatic exploration.",
-            "max_range": "100Mmi",
+            "description": "A highly engineered craft, built for extremely low temperature, high pressure, liquid exploration.",
+            "max_range": "500Mmi",
             "max_speed": 1,
             "image": liaraImg
         },
         {
             "id": "dm-7",
             "name": "novik",
-            "category": "ground, aerial",
+            "category": "ground, space",
             "size": "M",
             "max_occupancy": 6,
             "cargo": 50,
@@ -189,7 +189,7 @@ export const craftData = {
                 "Extremely long distance scanner",
                 "All-terrain drivetrain"
             ],
-            "description": "A aerial-ground hybrid equipped with autonomous features for varied terrain.",
+            "description": "A space-ground hybrid equipped with autonomous features for varied terrain.",
             "max_range": "1.2Bmi",
             "max_speed": 3,
             "image": novikImg
@@ -197,7 +197,7 @@ export const craftData = {
         {
             "id": "me-8",
             "name": "saren",
-            "category": "aerial",
+            "category": "space",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -214,17 +214,17 @@ export const craftData = {
                 "High-thrust direction changing"
             ],
             "description": "A small craft optimized for speed, agility, and high-stress maneuvers.",
-            "max_range": "50Mmi",
+            "max_range": "500Mmi",
             "max_speed": 3.5,
             "image": sarenImg
         },
         {
             "id": "ds-9",
             "name": "ishimura",
-            "category": "ground, aerial",
+            "category": "ground, space",
             "size": "XL",
             "max_occupancy": 20,
-            "cargo": 180,
+            "cargo": 200,
             "rating": 4.83,
             "reviewers": 17,
             "price": 15500,
@@ -252,10 +252,10 @@ export const craftData = {
         {
             "id": "sb-10",
             "name": "iberis",
-            "category": "ground, aerial",
+            "category": "ground, space",
             "size": "L",
             "max_occupancy": 10,
-            "cargo": 105,
+            "cargo": 110,
             "rating": 4.96,
             "reviewers": 58,
             "price": 7100,
@@ -282,7 +282,7 @@ export const craftData = {
         {
             "id": "mp-11",
             "name": "spire",
-            "category": "liquid, ground, aerial",
+            "category": "liquid, ground, space",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -302,14 +302,14 @@ export const craftData = {
                 "Heat and flame resistant components"
             ],
             "description": "A highly engineered craft, built for extremely high temperature and pressure exploration.",
-            "max_range": "100Mmi",
+            "max_range": "500Mmi",
             "max_speed": 1,
             "image": spireImg
         },
         {
             "id": "zim-12",
             "name": "invader",
-            "category": "aerial",
+            "category": "space",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -325,7 +325,7 @@ export const craftData = {
                 "Razberry CraftPlay"
             ],
             "description": "A small and nimble craft with enhanced features suitable for routine trips requiring agile navigation.",
-            "max_range": "900Mmi",
+            "max_range": "500Mmi",
             "max_speed": 2,
             "image": invaderImg
         }
@@ -339,7 +339,7 @@ TEMPLATE
         {
         "id": 1,
         "name": "NameHere",
-        "category": "(Ground, Aquatic)",
+        "category": "(Ground, Liquid)",
         "size": "(small/medium/large)",
         "occupancy":
             -small  -> 4-6 persons (4-6 people, basic supplies, and a small bathroom)
