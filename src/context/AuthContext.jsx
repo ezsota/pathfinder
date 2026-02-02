@@ -14,7 +14,7 @@ import { useState, useEffect, createContext, useContext } from "react";
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-    console.log('AuthProvider({ children }) loaded');
+    console.log('AuthContext.jsx loaded');
 
     // Authed user state
     const [user, setUser] = useState(null);

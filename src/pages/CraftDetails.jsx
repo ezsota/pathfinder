@@ -63,7 +63,7 @@ export default function CraftDetails() {
                                             <td>{craft.size}</td>
                                             <td>{craft.max_occupancy}</td>
                                             <td>{craft.cargo}cbm</td>
-                                            <td>{craft.max_range}</td>
+                                            <td>{craft.max_range}{craft.range_unit}</td>
                                             <td>{craft.max_speed}Mmph</td>
                                         </tr>
                                     </tbody>

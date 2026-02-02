@@ -38,7 +38,8 @@ export const craftData = {
                 "Combat armor and rifle (x6)",
             ],
             "description": "A multi-purpose spacecraft, built like a warthog, and essentially indestructable no matter what you do to it.",
-            "max_range": "500Mmi",
+            "max_range": 500,
+            "range_unit": "Mmi",
             "max_speed": 1,
             "image": chiefImg
         },
@@ -62,7 +63,8 @@ export const craftData = {
                 "Autonomous pilot crew"
             ],
             "description": "A medium-sized space craft, with balanced features, ideal for safe trips across civilized space.",
-            "max_range": "1Bmi",
+            "max_range": 1,
+            "range_unit": "Bmi",
             "max_speed": 2,
             "image": kerbalImg
         },
@@ -88,7 +90,8 @@ export const craftData = {
                 "On-board RepairBot"
             ],
             "description": "A large craft offering light-duty terrain travel outfitted with amenities to explore infinity and beyond.",
-            "max_range": "3.5Bmi",
+            "max_range": 3.5,
+            "range_unit": "Bmi",
             "max_speed": 3,
             "image": thiraImg
         },
@@ -114,7 +117,8 @@ export const craftData = {
                 "Mini-armory"
             ],
             "description": "A long-range ground-air hybrid suited for high cargo missions over uneven terrain.",
-            "max_range": "3Bmi",
+            "max_range": 3,
+            "range_unit": "Bmi",
             "max_speed": 3,
             "image": aranImg
         },
@@ -139,7 +143,8 @@ export const craftData = {
                 "Long-distance, roof deployable, scout drone"
             ],
             "description": "A versatile medium craft to transport moderate cargo and personnel across rough terrain on exploratory missions.",
-            "max_range": "500Mmi",
+            "max_range": 500,
+            "range_unit": "Mmi",
             "max_speed": 1,
             "image": tetrapodImg
         },
@@ -167,7 +172,8 @@ export const craftData = {
                 "Corrosion and frost resistant components"
             ],
             "description": "A highly engineered craft, built for extremely low temperature, high pressure, liquid exploration.",
-            "max_range": "500Mmi",
+            "max_range": 500,
+            "range_unit": "Mmi",
             "max_speed": 1,
             "image": liaraImg
         },
@@ -190,7 +196,8 @@ export const craftData = {
                 "All-terrain drivetrain"
             ],
             "description": "A space-ground hybrid equipped with autonomous features for varied terrain.",
-            "max_range": "1.2Bmi",
+            "max_range": 1.2,
+            "range_unit": "Bmi",
             "max_speed": 3,
             "image": novikImg
         },
@@ -214,7 +221,8 @@ export const craftData = {
                 "High-thrust direction changing"
             ],
             "description": "A small craft optimized for speed, agility, and high-stress maneuvers.",
-            "max_range": "500Mmi",
+            "max_range": 500,
+            "range_unit": "Mmi",
             "max_speed": 3.5,
             "image": sarenImg
         },
@@ -245,7 +253,8 @@ export const craftData = {
                 "On-board RepairBot"
             ],
             "description": "A top-tier extra-large craft offering the most space and amenities, suited for long voyages across unexplored deep space.",
-            "max_range": "4Bmi",
+            "max_range": 4,
+            "range_unit": "Bmi",
             "max_speed": 2,
             "image": ishimuraImg
         },
@@ -275,7 +284,8 @@ export const craftData = {
 
             ],
             "description": "A large and rugged craft offering heavy-duty terrain travel outfitted with amenities to explore off the beaten path.",
-            "max_range": "2Bmi",
+            "max_range": 2,
+            "range_unit": "Bmi",
             "max_speed": 2,
             "image": iberisImg
         },
@@ -302,7 +312,8 @@ export const craftData = {
                 "Heat and flame resistant components"
             ],
             "description": "A highly engineered craft, built for extremely high temperature and pressure exploration.",
-            "max_range": "500Mmi",
+            "max_range": 500,
+            "range_unit": "Mmi",
             "max_speed": 1,
             "image": spireImg
         },
@@ -325,7 +336,8 @@ export const craftData = {
                 "Razberry CraftPlay"
             ],
             "description": "A small and nimble craft with enhanced features suitable for routine trips requiring agile navigation.",
-            "max_range": "500Mmi",
+            "max_range": 500,
+            "range_unit": "Mmi",
             "max_speed": 2,
             "image": invaderImg
         }

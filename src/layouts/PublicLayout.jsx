@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
 export default function PublicLayout() {
-    console.log('layouts/PublicLayout.jsx loaded');
+    console.log('PublicLayout.jsx loaded');
 
     return (
         <div className="d-flex flex-column min-vh-100">

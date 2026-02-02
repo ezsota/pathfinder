@@ -5,8 +5,6 @@ import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 
 export default function NewReservation() {
-    console.log("pages/NewReservation.jsx loaded");
-
     // assign the first element, of the URL query, returned by useSearchParams() to params:
     const [params] = useSearchParams();
     // assign the value of ?craft=XXX to craftId

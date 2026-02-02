@@ -7,7 +7,6 @@ import { Carousel } from "bootstrap"; // For BSCarousel init on render
 import { useEffect, useRef } from "react"; // For BSCarousel init on render
 
 export default function Home() {
-
     const carouselRef = useRef(null); // For BSCarousel init on render
     useEffect (() => {
         // Avoid init before component mount

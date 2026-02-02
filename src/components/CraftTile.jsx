@@ -11,8 +11,6 @@ import currency from '../assets/currency.svg';
 
 
 export default function CraftTile(props) {
-    console.log('components/CraftTile.jsx loaded')
-
     return (
         <article className="col-md-4 mb-3">
             <div className="card">

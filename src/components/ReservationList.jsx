@@ -2,8 +2,7 @@
 // Browsing is public. Booking is authenticated.
 
 export default function ReservationList(props) {
-    console.log('components/ReservationsList.jsx loaded')
-    console.log('ReservationList.jsx component received:', props.userReservations)
+    console.log('ReservationList.jsx received:', props.userReservations)
 
     return (
         <section>

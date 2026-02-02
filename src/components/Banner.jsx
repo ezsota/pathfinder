@@ -1,8 +1,6 @@
 // hero banner on home page, login/logout-page, 
 
 export default function Banner() {
-    console.log('components/Banner.jsx loaded');
-
     return (
         <div className="bg-darkblue">
             <p className="p-1 px-sm-2 text-red fs-1 audiowide">PATHFINDER</p>

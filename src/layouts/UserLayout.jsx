@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import UserNavbar from "../components/UserNavbar.jsx";
 
 export default function UserLayout() {
-  console.log('layouts/UserLayout.jsx loaded');
+  console.log('UserLayout.jsx loaded');
 
   return (
     <div className="container-fluid">

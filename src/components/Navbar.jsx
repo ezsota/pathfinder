@@ -2,9 +2,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 
-export default function Navbar() {
-    console.log('components/Navbar.jsx loaded')
-    
+export default function Navbar() {    
     const { user, logout } = useAuth();
     const navigate = useNavigate();
 

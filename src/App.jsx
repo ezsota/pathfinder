@@ -30,7 +30,6 @@ import ErrorDisplay from "./components/ErrorDisplay.jsx";
 
 export default function App() {
   return (
-
     <Routes>
       {/* PUBLIC ROUTES */}
       <Route element={<PublicLayout />}>

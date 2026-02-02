@@ -5,8 +5,6 @@ import { useAuth } from "../context/AuthContext.jsx";
 import ReservationList from "../components/ReservationList.jsx";
 
 export default function UserReservations() {
-    console.log('pages/UserReservations.jsx loaded')
-
     const { user } = useAuth();
     const storedReservations = JSON.parse(localStorage.getItem("reservations")) || [];
 
