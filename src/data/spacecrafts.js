@@ -17,7 +17,7 @@ export const craftData = {
         {
             "id": "hl-1",
             "name": "chief",
-            "category": "ground, space",
+            "category": "off-road, space",
             "size": "S",
             "max_occupancy": 6,
             "cargo": 60,
@@ -46,7 +46,7 @@ export const craftData = {
         {
             "id": "ksp-2",
             "name": "kerbal",
-            "category": "space",
+            "category": "aerial, space",
             "size": "M",
             "max_occupancy": 10,
             "cargo": 80,
@@ -71,7 +71,7 @@ export const craftData = {
         {
             "id": "dm-3",
             "name": "thira",
-            "category": "ground, space",
+            "category": "soft-road, aerial, space",
             "size": "L",
             "max_occupancy": 15,
             "cargo": 120,
@@ -98,7 +98,7 @@ export const craftData = {
         {
             "id": "mp-4",
             "name": "aran",
-            "category": "ground, space",
+            "category": "soft-road, aerial, space",
             "size": "L",
             "max_occupancy": 10,
             "cargo": 100,
@@ -116,7 +116,7 @@ export const craftData = {
                 "Ammo generation system",
                 "Mini-armory"
             ],
-            "description": "A long-range ground-air hybrid suited for high cargo missions over uneven terrain.",
+            "description": "A long-range ground-air hybrid suited for high cargo missions over slightly uneven terrain.",
             "max_range": 3,
             "range_unit": "Bmi",
             "max_speed": 3,
@@ -125,7 +125,7 @@ export const craftData = {
         {
             "id": "sb-4",
             "name": "tetrapod",
-            "category": "ground, space",
+            "category": "off-road, space",
             "size": "M",
             "max_occupancy": 5,
             "cargo": 90,
@@ -151,7 +151,7 @@ export const craftData = {
         {
             "id": "me-6",
             "name": "liara",
-            "category": "liquid, ground, space",
+            "category": "liquid, aerial, space",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -180,7 +180,7 @@ export const craftData = {
         {
             "id": "dm-7",
             "name": "novik",
-            "category": "ground, space",
+            "category": "off-road, aerial, space",
             "size": "M",
             "max_occupancy": 6,
             "cargo": 50,
@@ -204,7 +204,7 @@ export const craftData = {
         {
             "id": "me-8",
             "name": "saren",
-            "category": "space",
+            "category": "aerial, space",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -229,7 +229,7 @@ export const craftData = {
         {
             "id": "ds-9",
             "name": "ishimura",
-            "category": "ground, space",
+            "category": "soft-road, aerial, space",
             "size": "XL",
             "max_occupancy": 20,
             "cargo": 200,
@@ -261,7 +261,7 @@ export const craftData = {
         {
             "id": "sb-10",
             "name": "iberis",
-            "category": "ground, space",
+            "category": "off-road, space",
             "size": "L",
             "max_occupancy": 10,
             "cargo": 110,
@@ -292,7 +292,7 @@ export const craftData = {
         {
             "id": "mp-11",
             "name": "spire",
-            "category": "liquid, ground, space",
+            "category": "liquid, aerial, space",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -311,7 +311,7 @@ export const craftData = {
                 "Environment adjustable propulsion system",
                 "Heat and flame resistant components"
             ],
-            "description": "A highly engineered craft, built for extremely high temperature and pressure exploration.",
+            "description": "A highly engineered craft, built for extremely high temperature and high pressure exploration.",
             "max_range": 500,
             "range_unit": "Mmi",
             "max_speed": 1,
@@ -320,7 +320,7 @@ export const craftData = {
         {
             "id": "zim-12",
             "name": "invader",
-            "category": "space",
+            "category": "aerial, space",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
