@@ -49,6 +49,7 @@ export default function UserLogin() {
                         onChange={event => setEmail(event.target.value)}
                         autoComplete="off"
                         placeholder="example@domain.com"
+                        required
                     />
                     <div className="d-grid gap-2 mt-5">
                         <button className="btn text-white bg-red mt-5 darkred-hover">Login</button>
