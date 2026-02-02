@@ -134,6 +134,10 @@ button {
   box-shadow: 0px 0px 20px 5px rgba(123, 17, 205, 0.522);
 }
 
+.txt-shadow-drkprp {
+  text-shadow: 0px 7px 7px rgb(41, 2, 71);
+}
+
 /* TEXT */
 .text-red,
 .nav-link.active {

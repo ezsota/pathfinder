@@ -31,11 +31,11 @@ export default function Home() {
     return (
         <div id="welcome-banner">
             <div className="container-fluid h-100">
-                <div className="row px-md-0 py-md-5 w-100 h-100 m-auto gap-5">
+                <div className="d-flex flex-column-reverse flex-lg-row align-items-baseline px-md-0 py-md-5 w-100 h-100 m-auto gap-0">
                     <aside className="
                     col-12
-                    col-sm-10
-                    col-md-8 
+                    col-sm-11
+                    col-md-10
                     col-lg-4 
                     d-flex 
                     flex-column 
@@ -43,16 +43,16 @@ export default function Home() {
                     bg-darkblue-transparent
                     rounded 
                     text-center
-                    m-auto 
+                    m-auto
                     ms-lg-5 
-                    my-auto 
+                    px-2
                     justify-content-around
                     text-white
                     shadow-shrp-drkprp">
-                        <h2>Explore our rentals.</h2>
+                        <h2 className="audiowide">Find your path</h2>
                         <article
                             ref={carouselRef}
-                            className="border rounded carousel slide carousel-fade overflow-hidden"
+                            className="rounded carousel slide carousel-fade overflow-hidden"
                             data-bs-ride="carousel">
                             <div className="carousel-inner">
                                 <div className="carousel-item active" data-bs-interval="2300">
@@ -67,10 +67,12 @@ export default function Home() {
                             </div>
                         </article>
                         <NavLink to="/listings" onClick={handleCtaClick}>
-                            <button className="bg-red text-white rounded darkpurple-hover py-3 fs-5 w-100">Available Rentals</button>
+                            <button className="bg-red text-white rounded darkpurple-hover py-3 fs-5 w-100 audiowide">View Available Rentals</button>
                         </NavLink>
                     </aside>
-                    {/* <div className="col-12 col-md-7"></div> */}
+                    <div className="col-12 col-sm-11 col-md-10 col-lg-7 text-center p-0 mx-auto mt-lg-5 text-white">
+                        <h1 className="fs-1 px-0 pt-5 m-0 txt-shadow-drkprp">Reach eternity in an instant</h1>
+                    </div>
                 </div>
             </div>
         </div>

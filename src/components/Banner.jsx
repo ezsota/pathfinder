@@ -5,7 +5,7 @@ export default function Banner() {
 
     return (
         <div className="bg-darkblue">
-            <h1 className="p-2 py-sm-3 px-sm-2 text-red">PATHFINDER</h1>
+            <p className="p-1 px-sm-2 text-red fs-1 audiowide">PATHFINDER</p>
         </div>
     );
 };
