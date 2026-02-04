@@ -101,6 +101,10 @@ button {
   background-color: #FF1400;
 }
 
+.bg-darkred {
+  background-color: #D71200;
+}
+
 .bg-lightred {
   background-color: #ffcec9;
 }
@@ -161,6 +165,10 @@ button {
   text-decoration: none;
 }
 
+.red-hover:hover {
+  background-color: #FF1400;
+}
+
 .darkred-hover:hover {
   background-color: #D71200;
 }
@@ -173,6 +181,12 @@ button {
   width: 65px;
   padding: 0;
   align-self: center;
+}
+
+@media(max-width: 450px) {
+  #clear-filters-btn {
+    width: 100% !important;
+  }
 }
 
 /* LISTS */

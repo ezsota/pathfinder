@@ -27,8 +27,8 @@ export default function FilterBox({ filters, setFilters }) {
             mt-3 mt-md-5 
             mb-md-3 
             mx-1 mx-md-3 mx-lg-5 
-            text-center text-white
-            navbar navbar-expand-lg navbar-dark bg-dark
+            text-center text-white 
+            navbar navbar-expand-lg navbar-dark bg-dark 
             rounded
             "
         >
@@ -47,8 +47,8 @@ export default function FilterBox({ filters, setFilters }) {
                 </button>
 
                 {/* DROPDOWNS */}
-                <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                    <ul className="navbar-nav list-group m-auto w-100 justify-content-evenly">
+                <div className="collapse navbar-collapse w-100" id="navbarNavDarkDropdown">
+                    <ul className="navbar-nav list-group m-auto w-100 justify-content-evenly gap-2 gap-md-0">
 
                         {/* TYPE */}
                         <li className="nav-item dropdown">
@@ -158,10 +158,9 @@ export default function FilterBox({ filters, setFilters }) {
                             </ul>
                         </li>
                     </ul>
+                    {/* FILTER CLEAR */}
+                    <button className="btn bg-darkred red-hover text-white m-auto w-25" id="clear-filters-btn" onClick={clearFilters}>Clear Filters</button>
                 </div>
-
-                {/* FILTER CLEAR */}
-                <button className="btn btn-primary m-auto w-25" onClick={clearFilters}>Clear Filters</button>
             </div>
         </nav>
     );

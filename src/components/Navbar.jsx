@@ -29,13 +29,13 @@ export default function Navbar() {
                         <NavLink to="/user/profile" className={linkToggler}>
                             Account
                         </NavLink>
-                        <button className="btn log-offon-btns nav-link ms-auto text-white bg-darkblue darkred-hover" onClick={handleLogout}>
+                        <button className="btn log-offon-btns nav-link ms-auto text-white bg-darkblue darkred-hover rounded-pill" onClick={handleLogout}>
                             Logout
                         </button>
                     </>
                 )
                 : (
-                    <NavLink to="/login" className={`btn log-offon-btns ms-auto text-white bg-darkblue darkpurple-hover`}>
+                    <NavLink to="/login" className={`btn log-offon-btns ms-auto text-white bg-darkblue darkpurple-hover rounded-pill`}>
                         Login
                     </NavLink>
                 )
