@@ -23,7 +23,7 @@ export const craftData = {
             "cargo": 60,
             "rating": 5,
             "reviewers": 75,
-            "price": 1453,
+            "price": 3453,
             "features": [
                 "Retractable wings for land travel",
                 "Rear and underbody thrusters",
@@ -52,7 +52,7 @@ export const craftData = {
             "cargo": 80,
             "rating": 4.63,
             "reviewers": 92,
-            "price": 2400,
+            "price": 3500,
             "features": [
                 "Emergency stealth technology",
                 "Multi-spectrum sensors",
@@ -104,7 +104,7 @@ export const craftData = {
             "cargo": 100,
             "rating": 4.81,
             "reviewers": 71,
-            "price": 5125,
+            "price": 6125,
             "features": [
                 "Large cargo hold",
                 "Mini lavatories and washrooms",
@@ -131,7 +131,7 @@ export const craftData = {
             "cargo": 90,
             "rating": 4.46,
             "reviewers": 48,
-            "price": 2800,
+            "price": 4800,
             "features": [
                 "Retractable 360-degree thrusters",
                 "All-terrain drivetrain and components",
@@ -157,7 +157,7 @@ export const craftData = {
             "cargo": 50,
             "rating": 5,
             "reviewers": 42,
-            "price": 1450,
+            "price": 10200,
             "features": [
                 "Sonar scanner",
                 "Auto collision avoidance",
@@ -186,7 +186,7 @@ export const craftData = {
             "cargo": 50,
             "rating": 4.89,
             "reviewers": 33,
-            "price": 2050,
+            "price": 4050,
             "features": [
                 "Autonomous hull repair",
                 "Retractable autocannons",
