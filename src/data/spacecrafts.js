@@ -52,7 +52,7 @@ export const craftData = {
             "cargo": 80,
             "rating": 4.63,
             "reviewers": 92,
-            "price": 3500,
+            "price": 3800,
             "features": [
                 "Emergency stealth technology",
                 "Multi-spectrum sensors",
