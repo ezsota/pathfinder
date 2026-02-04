@@ -71,7 +71,7 @@ export default function CraftListings() {
 
             <FilterBox filters={filters} setFilters={setFilters} />
 
-            <div className="row px-1 px-md-3 px-lg-5 py-3">
+            <div className="row m-auto px-1 px-md-3 px-lg-5 py-3">
                 {filteredCrafts.map(craft => (
                     <CraftTile key={craft.id} craft={craft} />
                 ))}
