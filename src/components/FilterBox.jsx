@@ -7,7 +7,7 @@ export default function FilterBox(props) {
         props.setFilters(defaultFilter);
     };
 
-function changeFilter(key, value) {
+function updateFilter(key, value) {
     props.setFilters(prev => {
         const currentFilters = prev[key];
         let newFilters;
@@ -63,7 +63,7 @@ function changeFilter(key, value) {
                                             className="form-check-input me-1"
                                             type="checkbox"
                                             checked={props.filters.category.includes(type)}
-                                            onChange={() => changeFilter("category", type)}
+                                            onChange={() => updateFilter("category", type)}
                                         />
                                         {type.charAt(0).toUpperCase() + type.slice(1)}
                                     </li>
@@ -81,7 +81,7 @@ function changeFilter(key, value) {
                                             className="form-check-input me-1"
                                             type="checkbox"
                                             checked={props.filters.size.includes(size)}
-                                            onChange={() => changeFilter("size", size)}
+                                            onChange={() => updateFilter("size", size)}
                                         />
                                         {size}
                                     </li>
@@ -99,7 +99,7 @@ function changeFilter(key, value) {
                                             className="form-check-input me-1"
                                             type="checkbox"
                                             checked={props.filters.max_occupancy.includes(range)}
-                                            onChange={() => changeFilter("max_occupancy", range)}
+                                            onChange={() => updateFilter("max_occupancy", range)}
                                         />
                                         {range}
                                     </li>
@@ -117,7 +117,7 @@ function changeFilter(key, value) {
                                             className="form-check-input me-1"
                                             type="checkbox"
                                             checked={props.filters.cargo.includes(val)}
-                                            onChange={() => changeFilter("cargo", val)}
+                                            onChange={() => updateFilter("cargo", val)}
                                         />
                                         {val}cbm
                                     </li>
@@ -135,7 +135,7 @@ function changeFilter(key, value) {
                                             className="form-check-input me-1"
                                             type="checkbox"
                                             checked={props.filters.max_range.includes(val)}
-                                            onChange={() => changeFilter("max_range", val)}
+                                            onChange={() => updateFilter("max_range", val)}
                                         />
                                         {val}
                                     </li>
@@ -153,7 +153,7 @@ function changeFilter(key, value) {
                                             className="form-check-input me-1"
                                             type="checkbox"
                                             checked={props.filters.max_speed.includes(val)}
-                                            onChange={() => changeFilter("max_speed", val)}
+                                            onChange={() => updateFilter("max_speed", val)}
                                         />
                                         {val}
                                     </li>
