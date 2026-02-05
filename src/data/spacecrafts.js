@@ -17,7 +17,7 @@ export const craftData = {
         {
             "id": "hl-1",
             "name": "chief",
-            "category": "off-road, space",
+            "category": "off-road",
             "size": "S",
             "max_occupancy": 6,
             "cargo": 60,
@@ -46,7 +46,7 @@ export const craftData = {
         {
             "id": "ksp-2",
             "name": "kerbal",
-            "category": "aerial, space",
+            "category": "aerial",
             "size": "M",
             "max_occupancy": 10,
             "cargo": 80,
@@ -71,7 +71,7 @@ export const craftData = {
         {
             "id": "dm-3",
             "name": "thira",
-            "category": "soft-road, aerial, space",
+            "category": "soft-road, aerial",
             "size": "L",
             "max_occupancy": 15,
             "cargo": 120,
@@ -98,7 +98,7 @@ export const craftData = {
         {
             "id": "mp-4",
             "name": "aran",
-            "category": "soft-road, aerial, space",
+            "category": "soft-road, aerial",
             "size": "L",
             "max_occupancy": 10,
             "cargo": 100,
@@ -125,7 +125,7 @@ export const craftData = {
         {
             "id": "sb-4",
             "name": "tetrapod",
-            "category": "off-road, space",
+            "category": "off-road",
             "size": "M",
             "max_occupancy": 5,
             "cargo": 90,
@@ -151,7 +151,7 @@ export const craftData = {
         {
             "id": "me-6",
             "name": "liara",
-            "category": "liquid, aerial, space",
+            "category": "liquid, aerial",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -180,7 +180,7 @@ export const craftData = {
         {
             "id": "dm-7",
             "name": "novik",
-            "category": "off-road, aerial, space",
+            "category": "off-road, aerial",
             "size": "M",
             "max_occupancy": 6,
             "cargo": 50,
@@ -196,7 +196,7 @@ export const craftData = {
                 "All-terrain drivetrain"
             ],
             "description": "A space-ground hybrid equipped with autonomous features for varied terrain.",
-            "max_range": 1.2,
+            "max_range": 1.5,
             "range_unit": "Bmi",
             "max_speed": 3,
             "image": novikImg
@@ -204,7 +204,7 @@ export const craftData = {
         {
             "id": "me-8",
             "name": "saren",
-            "category": "aerial, space",
+            "category": "aerial",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -229,7 +229,7 @@ export const craftData = {
         {
             "id": "ds-9",
             "name": "ishimura",
-            "category": "soft-road, aerial, space",
+            "category": "soft-road, aerial",
             "size": "XL",
             "max_occupancy": 20,
             "cargo": 200,
@@ -261,7 +261,7 @@ export const craftData = {
         {
             "id": "sb-10",
             "name": "iberis",
-            "category": "off-road, space",
+            "category": "off-road",
             "size": "L",
             "max_occupancy": 10,
             "cargo": 110,
@@ -292,7 +292,7 @@ export const craftData = {
         {
             "id": "mp-11",
             "name": "spire",
-            "category": "liquid, aerial, space",
+            "category": "liquid, aerial",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,
@@ -320,7 +320,7 @@ export const craftData = {
         {
             "id": "zim-12",
             "name": "invader",
-            "category": "aerial, space",
+            "category": "aerial",
             "size": "S",
             "max_occupancy": 4,
             "cargo": 50,

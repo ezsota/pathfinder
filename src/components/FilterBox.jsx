@@ -1,5 +1,6 @@
 //filter box (make this a rectangle with an image in the background) -> filter list of displayed crafts
 import { defaultFilter } from "../context/filterContext.js";
+import { craftData } from "../data/spacecrafts.js";
 
 // PROPS / PARENT COMPONENT = pages/CraftListings.jsx
 export default function FilterBox(props) {
@@ -7,22 +8,32 @@ export default function FilterBox(props) {
         props.setFilters(defaultFilter);
     };
 
-function updateFilter(key, value) {
-    props.setFilters(prev => {
-        const currentFilters = prev[key];
-        let newFilters;
+    function updateFilter(key, value) {
+        props.setFilters(prev => {
+            const currentFilters = prev[key];
+            let newFilters;
 
-        if (currentFilters.includes(value)) {
-            //filter is active - remove it
-            newFilters = currentFilters.filter(filter_value => filter_value !== value);
-        } else {
-            //filter not active - add it
-            newFilters = [...currentFilters, value];
-        }
+            if (currentFilters.includes(value)) {
+                //filter is active - remove it
+                newFilters = currentFilters.filter(filter_value => filter_value !== value);
+            } else {
+                //filter not active - add it
+                newFilters = [...currentFilters, value];
+            }
 
-        return {...prev, [key]: newFilters};
-    });
-};
+            return { ...prev, [key]: newFilters };
+        });
+    };
+
+    // SORTED FILTER VALUES
+    const categoriesSorted = [...new Set(craftData.spacecrafts.map(craft => craft.category))];
+    const cargoesUniqueSorted = [...new Set(craftData.spacecrafts.map(craft => craft.cargo))].sort((acc, currVal) => acc - currVal); //sort low to high
+    const rangesUniqueSorted = [...new Set( // get unique ranges
+        craftData.spacecrafts.map(
+            craft => craft.max_range))].sort( // sort low to high
+                (acc, currVal) => (currVal > 5) - (acc > 5) || acc - currVal // 500 first then remainders
+            );
+    const speedsUniqueSorted = [...new Set(craftData.spacecrafts.map(craft => craft.max_speed))].sort();
 
     return (
         <nav
@@ -53,19 +64,19 @@ function updateFilter(key, value) {
                 <div className="collapse navbar-collapse w-100" id="navbarNavDarkDropdown">
                     <ul className="navbar-nav list-group m-auto w-100 justify-content-evenly gap-2 gap-md-0">
 
-                        {/* TYPE */}
+                        {/* CATEGORIES */}
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Type</a>
                             <ul className="dropdown-menu dropdown-menu-dark">
-                                {["off-road", "soft-road", "liquid", "aerial", "space"].map(type => (
-                                    <li key={type} className="dropdown-item">
+                                {categoriesSorted.map(cat => (
+                                    <li key={cat} className="dropdown-item">
                                         <input
                                             className="form-check-input me-1"
                                             type="checkbox"
-                                            checked={props.filters.category.includes(type)}
-                                            onChange={() => updateFilter("category", type)}
+                                            checked={props.filters.category.includes(cat)}
+                                            onChange={() => updateFilter("category", cat)}
                                         />
-                                        {type.charAt(0).toUpperCase() + type.slice(1)}
+                                        {cat.charAt(0).toUpperCase() + cat.slice(1)}
                                     </li>
                                 ))}
                             </ul>
@@ -93,15 +104,15 @@ function updateFilter(key, value) {
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Occupants</a>
                             <ul className="dropdown-menu dropdown-menu-dark">
-                                {["1-10", "10-15", "15+"].map(range => (
-                                    <li key={range} className="dropdown-item">
+                                {["3-10", "10-15", "15+"].map(occs => (
+                                    <li key={occs} className="dropdown-item">
                                         <input
                                             className="form-check-input me-1"
                                             type="checkbox"
-                                            checked={props.filters.max_occupancy.includes(range)}
-                                            onChange={() => updateFilter("max_occupancy", range)}
+                                            checked={props.filters.max_occupancy.includes(occs)}
+                                            onChange={() => updateFilter("max_occupancy", occs)}
                                         />
-                                        {range}
+                                        {occs}
                                     </li>
                                 ))}
                             </ul>
@@ -111,7 +122,7 @@ function updateFilter(key, value) {
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Cargo</a>
                             <ul className="dropdown-menu dropdown-menu-dark">
-                                {[50, 100, 150, 200].map(val => (
+                                {cargoesUniqueSorted.map(val => (
                                     <li key={val} className="dropdown-item">
                                         <input
                                             className="form-check-input me-1"
@@ -129,17 +140,23 @@ function updateFilter(key, value) {
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Range</a>
                             <ul className="dropdown-menu dropdown-menu-dark">
-                                {[500, 1, 2, 3, 4].map(val => (
-                                    <li key={val} className="dropdown-item">
-                                        <input
-                                            className="form-check-input me-1"
-                                            type="checkbox"
-                                            checked={props.filters.max_range.includes(val)}
-                                            onChange={() => updateFilter("max_range", val)}
-                                        />
-                                        {val}
-                                    </li>
-                                ))}
+                                {rangesUniqueSorted.map(val => {
+                                    let adjVal;
+                                    val > 5 ? adjVal = `${val}Mmi` : adjVal = `${val}Bmi`;
+
+                                    return (
+                                        <li key={val} className="dropdown-item">
+                                            <input
+                                                className="form-check-input me-1"
+                                                type="checkbox"
+                                                checked={props.filters.max_range.includes(val)}
+                                                onChange={() => updateFilter("max_range", val)}
+                                            />
+                                            {adjVal}
+                                        </li>
+                                    )
+                                })
+                                }
                             </ul>
                         </li>
 
@@ -147,7 +164,7 @@ function updateFilter(key, value) {
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Speed</a>
                             <ul className="dropdown-menu dropdown-menu-dark">
-                                {[1, 2, 3].map(val => (
+                                {speedsUniqueSorted.map(val => (
                                     <li key={val} className="dropdown-item">
                                         <input
                                             className="form-check-input me-1"
@@ -155,7 +172,7 @@ function updateFilter(key, value) {
                                             checked={props.filters.max_speed.includes(val)}
                                             onChange={() => updateFilter("max_speed", val)}
                                         />
-                                        {val}
+                                        {val}Mmi
                                     </li>
                                 ))}
                             </ul>
