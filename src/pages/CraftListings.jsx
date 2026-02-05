@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { craftData } from "../data/spacecrafts.js";
 import FilterBox from "../components/FilterBox.jsx";
 import CraftTile from "../components/CraftTile.jsx";
@@ -6,6 +6,28 @@ import { defaultFilter } from "../context/filterContext.js";
 
 export default function CraftListings() {
     const [filters, setFilters] = useState(defaultFilter);
+
+    const [activeFilters, setActiveFilters] = useState([]);
+    console.log(activeFilters);
+
+    // Active Filters (no re-render)
+    useEffect(() => {
+        const newFilters = Object.entries(filters)
+            .map(([key, value]) => {
+                if (
+                    (Array.isArray(value) && value.length > 0) ||
+                    (typeof value === 'string' && value.trim() !== '') ||
+                    (typeof value === 'number' && value > 0)
+                ) {
+                    return { key, value };
+                }
+                return null;
+            })
+            .filter(Boolean); // remove null/undef values
+
+        setActiveFilters(newFilters);
+    }, [filters]);
+
 
     const filteredCrafts = useMemo(() => {
         return craftData.spacecrafts.filter(craft => {
@@ -69,7 +91,7 @@ export default function CraftListings() {
         <section>
             <h1 className="mt-4 text-center">Available Spacecraft Rentals</h1>
 
-            <FilterBox filters={filters} setFilters={setFilters} />
+            <FilterBox filters={filters} setFilters={setFilters} activeFilters={activeFilters} />
 
             <div className="row m-auto px-1 px-md-3 px-lg-5 py-3">
                 {filteredCrafts.map(craft => (
