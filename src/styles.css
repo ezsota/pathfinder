@@ -43,6 +43,14 @@ input {
   font-style: normal;
 }
 
+.font-smallest {
+  font-size: 8px;
+}
+
+.font-smaller {
+  font-size: 10px;
+}
+
 .font-small {
   font-size: 12px;
 }

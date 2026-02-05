@@ -37,15 +37,16 @@ export default function FilterBox(props) {
 
     return (
         <div className="
-            border rounded
             mt-3 mt-md-5 
             mb-md-3 
-            mx-1 mx-md-3 mx-lg-5">
+            mx-1 mx-lg-5
+            px-2
+            ">
             <nav
                 className="
                 text-center text-white 
                 navbar navbar-expand-lg navbar-dark bg-dark 
-                rounded-top
+                rounded
                 "
             >
                 <div className="container-fluid">
@@ -186,16 +187,22 @@ export default function FilterBox(props) {
                 </div>
             </nav>
             {props.activeFilters.length > 0 ? (
-                <aside className="d-flex align-items-center justify-content-start">
+                <aside className="d-flex flex-wrap align-items-center justify-content-start px-2">
                     <h3>Filters:</h3>
                     {props.activeFilters.map(({ key, value }) => (
-                        <span key={key} className="px-3">
+                        <span key={key} className="
+                        mx-0 mx-lg-2
+                        p-1 px-md-2 
+                        border 
+                        rounded-pill
+                        bg-midgray
+                        font-smaller">
                             {key}: {Array.isArray(value) ? value.join(', ') : String(value)}
                         </span>
                     ))}
                 </aside>
             ) : (
-                <p className="text-center m-auto py-1">No Active Filters</p>
+                null
             )}
         </div>
 
