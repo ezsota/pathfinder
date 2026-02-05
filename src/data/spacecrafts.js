@@ -25,7 +25,7 @@ export const craftData = {
             "reviewers": 75,
             "price": 3453,
             "features": [
-                "Retractable wings for land travel",
+                "Take-off & landing thrusters",
                 "Rear and underbody thrusters",
                 "Multi-terrain drivetrain",
                 "Rugged chassis design",
@@ -133,7 +133,7 @@ export const craftData = {
             "reviewers": 48,
             "price": 4800,
             "features": [
-                "Retractable 360-degree thrusters",
+                "Take-off & landing thrusters",
                 "All-terrain drivetrain and components",
                 "On-board RepairBot",
                 "Single-person lavatory",
@@ -239,7 +239,7 @@ export const craftData = {
             "features": [
                 "Highly spacious cargo and occupancy capacity",
                 "Automatic combat system",
-                "Guided take-off and landing system",
+                "Automatic take-off and landing",
                 "Spacious lavatories and sleeping quarters",
                 "On-board clinic with RoboMedic",
                 "Fully equipped research lab",
@@ -270,7 +270,7 @@ export const craftData = {
             "price": 7100,
             "features": [
                 "Large cargo hold",
-                "Retractable flight wings",
+                "Take-off & landing thrusters",
                 "Height adjustable offroad suspension",
                 "Dual lavatories and washrooms",
                 "Capsule sleeping quarters",
