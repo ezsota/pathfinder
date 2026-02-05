@@ -45,7 +45,7 @@ export default function FilterBox(props) {
             <nav
                 className="
                 text-center text-white 
-                navbar navbar-expand-lg navbar-dark bg-dark 
+                navbar navbar-expand-lg navbar-dark bg-darkblue
                 rounded
                 "
             >
@@ -69,7 +69,7 @@ export default function FilterBox(props) {
 
                             {/* CATEGORIES */}
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Type</a>
+                                <a className="nav-link dropdown-toggle border rounded text-white-hover darkpurple-hover" href="#" role="button" data-bs-toggle="dropdown">Type</a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
                                     {categoriesSorted.map(cat => (
                                         <li key={cat} className="dropdown-item">
@@ -87,7 +87,7 @@ export default function FilterBox(props) {
 
                             {/* SIZE */}
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Size</a>
+                                <a className="nav-link dropdown-toggle border rounded text-white-hover darkpurple-hover" href="#" role="button" data-bs-toggle="dropdown">Size</a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
                                     {["S", "M", "L", "XL"].map(size => (
                                         <li key={size} className="dropdown-item">
@@ -105,7 +105,7 @@ export default function FilterBox(props) {
 
                             {/* OCCUPANTS */}
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Occupants</a>
+                                <a className="nav-link dropdown-toggle border rounded text-white-hover darkpurple-hover" href="#" role="button" data-bs-toggle="dropdown">Occupants</a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
                                     {["3-10", "10-15", "15+"].map(occs => (
                                         <li key={occs} className="dropdown-item">
@@ -123,7 +123,7 @@ export default function FilterBox(props) {
 
                             {/* CARGO */}
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Cargo</a>
+                                <a className="nav-link dropdown-toggle border rounded text-white-hover darkpurple-hover" href="#" role="button" data-bs-toggle="dropdown">Cargo</a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
                                     {cargoesUniqueSorted.map(val => (
                                         <li key={val} className="dropdown-item">
@@ -141,7 +141,7 @@ export default function FilterBox(props) {
 
                             {/* RANGE */}
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Range</a>
+                                <a className="nav-link dropdown-toggle border rounded text-white-hover darkpurple-hover" href="#" role="button" data-bs-toggle="dropdown">Range</a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
                                     {rangesUniqueSorted.map(val => {
                                         let adjVal;
@@ -165,7 +165,7 @@ export default function FilterBox(props) {
 
                             {/* SPEED */}
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle border rounded" href="#" role="button" data-bs-toggle="dropdown">Speed</a>
+                                <a className="nav-link dropdown-toggle border rounded text-white-hover darkpurple-hover" href="#" role="button" data-bs-toggle="dropdown">Speed</a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
                                     {speedsUniqueSorted.map(val => (
                                         <li key={val} className="dropdown-item">
@@ -182,7 +182,7 @@ export default function FilterBox(props) {
                             </li>
                         </ul>
                         {/* FILTER CLEAR */}
-                        <button className="btn bg-darkred red-hover text-white m-auto w-25" id="clear-filters-btn" onClick={clearFilters}>Clear Filters</button>
+                        <button className="btn bg-darkred red-hover text-white mt-3 mt-lg-0 mx-auto w-25" id="clear-filters-btn" onClick={clearFilters}>Clear Filters</button>
                     </div>
                 </div>
             </nav>

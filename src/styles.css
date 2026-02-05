@@ -168,6 +168,10 @@ button {
   color: #F5F7F9;
 }
 
+.text-white-hover:hover {
+  color: #F5F7F9;
+}
+
 /* LINKS/BUTTONS/HOVER */
 .no-underline {
   text-decoration: none;
