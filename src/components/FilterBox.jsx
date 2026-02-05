@@ -1,25 +1,28 @@
 //filter box (make this a rectangle with an image in the background) -> filter list of displayed crafts
-// PARENT COMPONENT = pages/CraftListings.jsx
-
 import { defaultFilter } from "../context/filterContext.js";
 
-export default function FilterBox({ filters, setFilters }) {
+// PROPS / PARENT COMPONENT = pages/CraftListings.jsx
+export default function FilterBox(props) {
     function clearFilters() {
-        setFilters(defaultFilter);
+        props.setFilters(defaultFilter);
     };
 
-    function toggleFilter(key, value) {
-        setFilters(prev => {
-            const exists = prev[key].includes(value);
+function changeFilter(key, value) {
+    props.setFilters(prev => {
+        const currentFilters = prev[key];
+        let newFilters;
 
-            return {
-                ...prev,
-                [key]: exists
-                    ? prev[key].filter(val => val !== value)
-                    : [...prev[key], value],
-            };
-        });
-    }
+        if (currentFilters.includes(value)) {
+            //filter is active - remove it
+            newFilters = currentFilters.filter(filter_value => filter_value !== value);
+        } else {
+            //filter not active - add it
+            newFilters = [...currentFilters, value];
+        }
+
+        return {...prev, [key]: newFilters};
+    });
+};
 
     return (
         <nav
@@ -59,8 +62,8 @@ export default function FilterBox({ filters, setFilters }) {
                                         <input
                                             className="form-check-input me-1"
                                             type="checkbox"
-                                            checked={filters.category.includes(type)}
-                                            onChange={() => toggleFilter("category", type)}
+                                            checked={props.filters.category.includes(type)}
+                                            onChange={() => changeFilter("category", type)}
                                         />
                                         {type.charAt(0).toUpperCase() + type.slice(1)}
                                     </li>
@@ -77,8 +80,8 @@ export default function FilterBox({ filters, setFilters }) {
                                         <input
                                             className="form-check-input me-1"
                                             type="checkbox"
-                                            checked={filters.size.includes(size)}
-                                            onChange={() => toggleFilter("size", size)}
+                                            checked={props.filters.size.includes(size)}
+                                            onChange={() => changeFilter("size", size)}
                                         />
                                         {size}
                                     </li>
@@ -95,8 +98,8 @@ export default function FilterBox({ filters, setFilters }) {
                                         <input
                                             className="form-check-input me-1"
                                             type="checkbox"
-                                            checked={filters.max_occupancy.includes(range)}
-                                            onChange={() => toggleFilter("max_occupancy", range)}
+                                            checked={props.filters.max_occupancy.includes(range)}
+                                            onChange={() => changeFilter("max_occupancy", range)}
                                         />
                                         {range}
                                     </li>
@@ -113,8 +116,8 @@ export default function FilterBox({ filters, setFilters }) {
                                         <input
                                             className="form-check-input me-1"
                                             type="checkbox"
-                                            checked={filters.cargo.includes(val)}
-                                            onChange={() => toggleFilter("cargo", val)}
+                                            checked={props.filters.cargo.includes(val)}
+                                            onChange={() => changeFilter("cargo", val)}
                                         />
                                         {val}cbm
                                     </li>
@@ -131,8 +134,8 @@ export default function FilterBox({ filters, setFilters }) {
                                         <input
                                             className="form-check-input me-1"
                                             type="checkbox"
-                                            checked={filters.max_range.includes(val)}
-                                            onChange={() => toggleFilter("max_range", val)}
+                                            checked={props.filters.max_range.includes(val)}
+                                            onChange={() => changeFilter("max_range", val)}
                                         />
                                         {val}
                                     </li>
@@ -149,8 +152,8 @@ export default function FilterBox({ filters, setFilters }) {
                                         <input
                                             className="form-check-input me-1"
                                             type="checkbox"
-                                            checked={filters.max_speed.includes(val)}
-                                            onChange={() => toggleFilter("max_speed", val)}
+                                            checked={props.filters.max_speed.includes(val)}
+                                            onChange={() => changeFilter("max_speed", val)}
                                         />
                                         {val}
                                     </li>
