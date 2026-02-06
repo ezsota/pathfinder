@@ -23,7 +23,7 @@ export default function UserNavbar() {
   "
     >
       <header className="p-3">
-        <h4 className="audiowide text-red m-0">PATHFINDER</h4>
+        <h4 className="audiowide text-red fs-5">PATHFINDER</h4>
       </header>
 
       {/* MOBILE TOOLBAR */}

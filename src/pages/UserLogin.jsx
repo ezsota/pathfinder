@@ -4,21 +4,26 @@ import { useAuth } from "../context/AuthContext.jsx";
 import IconLrg from "../assets/icon_lrg.svg";
 
 export default function UserLogin() {
+    //email state
     const [email, setEmail] = useState("");
-    // get login from custom hook in AuthContext.jsx
+
+    // get auth user info
     const { login } = useAuth();
+
+    // assign useNavigate() function
     const navigate = useNavigate();
-    // useLocation() used to inspect and get info from the current URL (location)
+
+    // get info from location state (from CraftDetails.jsx)
     const location = useLocation();
-    // Optional chaining to get id from state, if undefined then id will be set to undefined for error handling
-    const craftId = location.state?.craftId;
+    const { craftName, craftId } = location.state;
 
     function handleSubmit(event) {
         event.preventDefault();
         // use login function from useAuth custom hook
         login(email);
+        // (from CraftDetails.jsx) persist URL & location state to NewReservation.jsx (preserves un-authed users action
         navigate(
-            craftId ? `/user/reservations/new?craft=${craftId}` : "/user/reservations"
+            craftId ? `/user/reservations/new?craft=${craftId}` : "/user/reservations", { state: { craftName: craftName } }
         );
     };
 

@@ -7,23 +7,24 @@ import currencyImg from '../assets/currency.svg';
 
 
 export default function CraftDetails() {
-    console.log('pages/CraftDetails.jsx loaded');
-
-
-    // getParams() gets id from url (via CraftTile.jsx <Link>)
-    const { id } = useParams();
-    const craft = craftData.spacecrafts.find(craft => craft.id === id);
-    // gets user data from custom hook useAuth in AuthContext.jsx
+    // get auth user data
     const { user } = useAuth();
-    // utilize useNavigate() hook to dynamically change URL and auto-route users
+
+    // getParams() gets id from url
+    const { id } = useParams();
+
+    // get craft data using 'id'
+    const craft = craftData.spacecrafts.find(craft => craft.id === id);
+
+    // dynamically change URL and auto-route users in handlerReservation()
     const navigate = useNavigate();
 
     function handleReservation() {
         if (!user) {
-            // send craft id state, using useLocation hook, to UserLogin.jsx (preserves users action)
+            // send craft id state, using useLocation hook, to UserLogin.jsx (preserves un-authed users action)
             navigate("/login", { state: { craftName: craft.name, craftId: id } });
         } else {
-            // query string (?) used to inject craft id into URL
+            // send id (URL param) and location state to NewReservation.jsx (preserves authed users action)
             navigate(`/user/reservations/new?craft=${id}`, { state: { craftName: craft.name } });
         }
     };

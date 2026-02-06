@@ -3,20 +3,27 @@
 
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
+import { craftData } from "../data/spacecrafts.js";
 
 export default function NewReservation() {
-    // assign the first element, of the URL query, returned by useSearchParams() to params:
+    // get user auth info
+    const { user } = useAuth();
+
+    // assign useNavigate() to var
+    const navigate = useNavigate();
+
+    // destructure url param for id value -> assign ?craft=XXX to craftId
     const [params] = useSearchParams();
-    // assign the value of ?craft=XXX to craftId
     const craftId = params.get("craft");
 
     // get craft name (useLocation):
-    const { state } = useLocation();
-    const craftName = state?.craftName;
+    const location = useLocation();
+    const { craftName } = location.state || 'craftName';
+    const formattedCraftName = craftName.charAt(0).toUpperCase() + craftName.slice(1);
 
-    // get user auth info
-    const { user } = useAuth();
-    const navigate = useNavigate();
+    // get craft image using craft id
+    const craftInCart = craftData.spacecrafts.find(craft => craft.id === craftId);
+    const resrvationImg = craftInCart.image;
 
     function handleReservation() {
         // assign reservations to anything stored, OR set reservations to empty array
@@ -25,7 +32,7 @@ export default function NewReservation() {
 
         // add new reservation to reservations variable
         reservations.push({
-            id: crypto.randomUUID(),
+            id: crypto.randomUUID(),// "reservation number" for UserReservations.jsx
             userId: user.id,
             email: user.email,
             craftId,
@@ -41,13 +48,22 @@ export default function NewReservation() {
     };
 
     return (
-        <section>
-            <h1>Confirm Reservation</h1>
-            <h2>{craftName}</h2>
-            <p>Craft ID: {craftId}</p>
-            <button className="btn btn-primary" onClick={handleReservation}>
-                Reserve Now
-            </button>
+        <section className="h-100 d-flex">
+            <div className="text-center m-auto p-5 bg-darkblue shadow-shrp-blk text-white rounded">
+                <header>
+                    <p>Almost Launch Time!</p>
+                    <h1 className="py-1 fs-3">Confirm Your Reservation</h1>
+                    <img src={resrvationImg} className="rounded img-fluid" alt={`Image of ${formattedCraftName}`} />
+                </header>
+                <ul className="list-unstyled py-1">
+                    <li className="py-1"><strong>Craft:</strong> {formattedCraftName}</li>
+                    <li className="py-1"><strong>Craft ID:</strong> {craftId}</li>
+                    <li className="py-1"><strong>Price:</strong> {craftInCart.price}/week</li>
+                </ul>
+                <button className="btn btn-success w-100 px-0 px-md-3 py-0 py-md-2 fs-4" onClick={handleReservation}>
+                    Reserve Now
+                </button>
+            </div>
         </section>
     );
 };
