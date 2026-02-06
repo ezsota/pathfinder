@@ -24,7 +24,7 @@ export default function CraftTile(props) {
                 {/* CARD BOTTOM */}
                 <div className="card-body d-flex flex-column">
                     {/* TABLE */}
-                    <section className="my-2 rounded p-0 w-100">
+                    <section className="my-2 rounded p-0 w-100 text-center">
                         <div className="table-responsive">
                             <table className="table table-sm table-secondary table-striped rounded-table">
                                 <thead>
