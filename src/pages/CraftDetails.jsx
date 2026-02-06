@@ -52,7 +52,7 @@ export default function CraftDetails() {
                                     <thead>
                                         <tr>
                                             <th className="vertical-header text-wrap">Size</th>
-                                            <th className="vertical-header text-wrap">Occupants</th>
+                                            <th className="vertical-header text-wrap">Crew</th>
                                             <th className="vertical-header text-wrap">Cargo</th>
                                             <th className="vertical-header text-wrap">Range</th>
                                             <th className="vertical-header text-wrap">Speed</th>

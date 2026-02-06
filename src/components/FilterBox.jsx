@@ -103,11 +103,11 @@ export default function FilterBox(props) {
                                 </ul>
                             </li>
 
-                            {/* OCCUPANTS */}
+                            {/* OCCUPANCY */}
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle border rounded text-white-hover darkpurple-hover" href="#" role="button" data-bs-toggle="dropdown">Occupants</a>
+                                <a className="nav-link dropdown-toggle border rounded text-white-hover darkpurple-hover" href="#" role="button" data-bs-toggle="dropdown">Crew</a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
-                                    {["3-10", "10-15", "15+"].map(occs => (
+                                    {["2-10", "10-15", "15+"].map(occs => (
                                         <li key={occs} className="dropdown-item">
                                             <input
                                                 className="form-check-input me-1"

@@ -51,9 +51,9 @@ export default function CraftListings() {
 
             // OCCUPANCY
             if (filters.max_occupancy.length) {
-                const matches = filters.max_occupancy.some(range => {
-                    if (range === "15+") return craft.max_occupancy >= 15;
-                    const [min, max] = range.split("-").map(Number);
+                const matches = filters.max_occupancy.some(occ => {
+                    if (occ === "15+") return craft.max_occupancy >= 15;
+                    const [min, max] = occ.split("-").map(Number);
                     return craft.max_occupancy >= min && craft.max_occupancy <= max;
                 });
                 if (!matches) return false;
