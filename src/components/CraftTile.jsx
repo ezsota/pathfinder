@@ -50,8 +50,8 @@ export default function CraftTile(props) {
                     </section>
                     {/* FOOTER */}
                     <footer className="d-flex align-content-center justify-content-evenly flex-wrap">
-                        <p className="card-text">{props.craft.rating}<img src={starImg} alt="Image of a star for rating" />({props.craft.reviewers} reviews)</p>
-                        <p className="card-text"><img src={currency} alt="Fake currency symbol" />{props.craft.price}/week</p>
+                        <p className="card-text my-auto">{props.craft.rating}<img src={starImg} alt="Image of a star for rating" />({props.craft.reviewers} reviews)</p>
+                        <p className="card-text my-auto"><img src={currency} alt="Fake currency symbol" />{props.craft.price}/week</p>
                         <Link to={`/listings/${props.craft.id}`} className="btn btn-primary">
                             More Details
                         </Link>
