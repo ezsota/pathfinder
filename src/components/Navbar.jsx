@@ -15,7 +15,7 @@ export default function Navbar() {
     const linkToggler = ( {isActive} ) => isActive ? "nav-link active" : "nav-link text-black";
 
     return (
-        <nav className="nav gap-0 gap-md-3 pe-3 bg-midgray">
+        <nav className="nav gap-0 gap-md-3 pe-3 bg-midgray font-small">
             <NavLink to="/" end className={linkToggler}>
                 Home
             </NavLink>

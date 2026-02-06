@@ -60,6 +60,16 @@ th {
   font-size: 12px;
 }
 
+.font-medium {
+  font-size: 14px;
+}
+
+@media(min-width:450px) {
+  nav.font-small {
+    font-size: 16px;
+  }
+}
+
 /* GENERAL */
 *,
 html {

@@ -2,13 +2,27 @@
 // Browsing is public. Booking is authenticated.
 
 export default function ReservationList(props) {
-    console.log('ReservationList.jsx received:', props.userReservations)
+    console.log('Current User ResData:', props.userReservations)
+
+  
 
     return (
         <section>
-            <ol className="profile-list">
+            <ol className="list-group list-group-numbered font-medium">
                 {props.userReservations.map(reservation => (
-                    <li key={reservation.id}><strong>Name: </strong>{reservation.craftName} <strong>Id:</strong> {reservation.craftId}</li>
+                    <li key={reservation.id} className="list-group-item d-flex justify-content-between align-items-start flex-wrap">
+                        <div className="ms-2 me-auto">
+                            <div>
+                                <strong>Res#:</strong> {reservation.id}
+                            </div>
+                            <span>
+                                <strong>Craft:</strong> {reservation.craftName} | <strong>Craft Id:</strong> {reservation.craftId}
+                            </span>
+                        </div>
+                        <span className="badge rounded-pill">
+                            <button className="btn btn-danger rounded-pill font-small" onClick={props.deleteReservation}>End Reservation</button>
+                        </span>
+                    </li>
                 ))}
             </ol>
         </section>

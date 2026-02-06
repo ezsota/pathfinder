@@ -12,11 +12,15 @@ export default function UserReservations() {
     const userReservations = storedReservations.filter(
         res => res.userId == user.id
     );
-    
+
+    function deleteReservation() {
+        console.log('res deleted');
+    };
+
     return (
         <section>
             <h1 className="border-bottom pb-4">Current Reservations</h1>
-            <ReservationList userReservations={userReservations} />
+            <ReservationList userReservations={userReservations} deleteReservation={deleteReservation} />
         </section>
     );
 };

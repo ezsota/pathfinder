@@ -24,7 +24,7 @@ export default function ProfileItems() {
     };
 
     return (
-        <section>
+        <section className="text-center">
             <img src={profAvatar} className="img-thumbnail" id="prof-image" alt="User profile avatar" />
             <ul className="list-unstyled profile-list">
                 <li><strong>Id:</strong> {user.id}</li>

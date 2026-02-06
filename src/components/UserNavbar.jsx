@@ -28,7 +28,7 @@ export default function UserNavbar() {
 
       {/* MOBILE TOOLBAR */}
       <div className="d-flex d-md-none align-items-center justify-content-between px-3 py-2">
-        <ul className="list-unstyled d-flex gap-3 m-0">
+        <ul className="list-unstyled d-flex gap-3 m-0 font-small">
           <li>
             <NavLink to="/user/profile" end className={linkToggler}>
               Profile
@@ -47,7 +47,7 @@ export default function UserNavbar() {
         </ul>
 
         <button
-          className="btn bg-purple darkred-hover text-white btn-small p-0 ms-2"
+          className="btn bg-purple darkred-hover text-white btn-small px-1 py-0 ms-2 font-small"
           onClick={handleLogout}
         >
           Logout
