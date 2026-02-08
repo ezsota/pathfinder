@@ -26,7 +26,16 @@ export default function UserReservations() {
     }, [user.id]);
 
     //delete a reservation on btn click (ReservationList.jsx)
-    function deleteReservation(resId) {
+    function deleteReservation(resId, craftName, timeStamp) {
+        // verify delete action
+        const confirmation = window.confirm(`
+            Are you sure you want to end this rental?\n
+            Craft: ${craftName}\n
+            Res#: ${resId}\n
+            Rented: ${timeStamp}
+            `);
+        if (!confirmation) return;
+
         // get all reservations ('server data')
         const allReservations = JSON.parse(localStorage.getItem("reservations") || []);
         //Get all res id's besides one selected for deletion        

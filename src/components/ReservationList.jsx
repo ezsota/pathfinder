@@ -14,11 +14,11 @@ export default function ReservationList(props) {
                                 <strong>Res#:</strong> {reservation.id}
                             </div>
                             <span>
-                                <strong>Craft:</strong> {reservation.craftName} | <strong>Craft Id:</strong> {reservation.craftId}
+                                <strong>Craft:</strong> {reservation.craftName} | <strong>Craft Id:</strong> {reservation.craftId} | <strong>Rented:</strong> {reservation.createdAt}
                             </span>
                         </div>
                         <span className="badge rounded-pill">
-                            <button className="btn btn-danger rounded-pill font-small" onClick={() => props.deleteReservation(reservation.id)}>End Reservation</button>
+                            <button className="btn btn-danger rounded-pill font-small" onClick={() => props.deleteReservation(reservation.id, reservation.craftName, reservation.createdAt)}>End Reservation</button>
                         </span>
                     </li>
                 ))}

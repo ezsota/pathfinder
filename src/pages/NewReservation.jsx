@@ -30,6 +30,10 @@ export default function NewReservation() {
         const reservations = JSON.parse(localStorage.getItem("reservations")) || [];
         console.log('Stored Reservations:', reservations);
 
+        // Timestamp
+        const timeData = Date.now();
+        const timestamp = new Date(timeData).toLocaleString();
+
         // add new reservation to reservations variable
         reservations.push({
             id: crypto.randomUUID(),// "reservation number" for UserReservations.jsx
@@ -37,7 +41,7 @@ export default function NewReservation() {
             email: user.email,
             craftId,
             craftName,
-            createdAt: Date.now()
+            createdAt: timestamp
         });
 
         //update reservations in localStorage with current data
