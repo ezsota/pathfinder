@@ -15,7 +15,7 @@ export default function UserLogin() {
 
     // get info from location state (from CraftDetails.jsx)
     const location = useLocation();
-    const { craftName, craftId } = location.state;
+    const { craftName, craftId } = location.state ?? {};
 
     function handleSubmit(event) {
         event.preventDefault();

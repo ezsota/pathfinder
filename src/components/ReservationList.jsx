@@ -4,8 +4,6 @@
 export default function ReservationList(props) {
     console.log('Current User ResData:', props.userReservations)
 
-  
-
     return (
         <section>
             <ol className="list-group list-group-numbered font-medium">
@@ -20,7 +18,7 @@ export default function ReservationList(props) {
                             </span>
                         </div>
                         <span className="badge rounded-pill">
-                            <button className="btn btn-danger rounded-pill font-small" onClick={props.deleteReservation}>End Reservation</button>
+                            <button className="btn btn-danger rounded-pill font-small" onClick={() => props.deleteReservation(reservation.id)}>End Reservation</button>
                         </span>
                     </li>
                 ))}
