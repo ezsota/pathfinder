@@ -21,10 +21,13 @@ export default function UserLogin() {
         event.preventDefault();
         // use login function from useAuth custom hook
         login(email);
+
+        const targetUrl = craftId
+            ? `/user/reservations/new?craft=${craftId}`
+            : "/user";
+
         // (from CraftDetails.jsx) persist URL & location state to NewReservation.jsx (preserves un-authed users action
-        navigate(
-            craftId ? `/user/reservations/new?craft=${craftId}` : "/user/reservations", { state: { craftName: craftName } }
-        );
+        navigate(targetUrl, { state: craftName ? { craftName } : undefined, replace: true });
     };
 
     // Used a form since the main action is a submit:
