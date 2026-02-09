@@ -22,9 +22,9 @@ export default function UserNavbar() {
     min-vh-md-100
   "
     >
-      <header className="p-3">
-        <h4 className="audiowide text-red fs-5">PATHFINDER</h4>
-      </header>
+      <div className="p-3">
+        <p className="audiowide text-red fs-5 m-0">PATHFINDER</p>
+      </div>
 
       {/* MOBILE TOOLBAR */}
       <div className="d-flex d-md-none align-items-center justify-content-between px-3 py-2">

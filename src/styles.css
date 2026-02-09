@@ -64,6 +64,18 @@ th {
   font-size: 14px;
 }
 
+.font-large {
+  font-size: 16px;
+}
+
+.font-larger {
+  font-size: 18px;
+}
+
+.font-largest {
+  font-size: 24px;
+}
+
 @media(min-width:450px) {
   nav.font-small {
     font-size: 16px;
