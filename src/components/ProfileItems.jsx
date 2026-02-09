@@ -32,7 +32,7 @@ export default function ProfileItems() {
             </ul>
             <button className="btn btn-danger" onClick={() => setDisplayVerifyBox(true)}>Delete Account</button>
             {displayVerifyBox && (
-                <aside className="mt-5 p-3 border border-danger bg-lightred" id="verify-box">
+                <aside className="mt-5 p-3 border border-danger bg-lightred m-auto" id="verify-box">
                     <p>To confirm deletion, please type: <strong>delete my account</strong></p>
                     <input type="text" maxLength={17} value={usrInput} onChange={(event) => setUsrInput(event.target.value)}/>
                     <button className="btn btn-danger m-2" onClick={handleConfirmDelete} disabled={usrInput !== verifyTerm}>Confirm Deletion</button>
