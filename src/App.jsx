@@ -25,8 +25,9 @@ import UserProfile from "./pages/UserProfile.jsx";
 import UserReservations from "./pages/UserReservations.jsx";
 // Routes:
 import ProtectedRoute from "./routes/ProtectedRoute.jsx";
-// Errors:
-import ErrorDisplay from "./components/ErrorDisplay.jsx";
+// Error:
+import ErrorPage from "./pages/ErrorPage.jsx";
+
 
 export default function App() {
   return (
@@ -36,7 +37,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/listings" element={<CraftListings />} />
         <Route path="/listings/:id" element={<CraftDetails />} />
-        <Route path="/error" element={<ErrorDisplay />} />
       </Route>
       {/* PUBLIC LOGIN ROUTE */}
       <Route path="/login" element={<UserLogin />} />
@@ -46,10 +46,13 @@ export default function App() {
           <UserLayout />
         </ProtectedRoute>
       }>
+        <Route index element={<UserProfile />} />
         <Route path="reservations" element={<UserReservations />} />
         <Route path="reservations/new" element={<NewReservation />} />
         <Route path="profile" element={<UserProfile />} />
       </Route>
+      {/* ERROR ROUTE */}
+      <Route path="*" element={<ErrorPage />} />
     </Routes >
   );
 };
@@ -73,5 +76,9 @@ REACT ROUTER NOTES
   - sets the path prop ->  example: path="/about"
   - nested child inside <Routes>
   - React Router 4+
+
+  index
+  - <Route index element={<UserProfile />} /> avoids empty renders when refreshing 
+  - ProtextedRoute.jsx & AuthContext.jsx rehydrates auth using 'loading' state
 
 */

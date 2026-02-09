@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import profAvatar from "../assets/profile_avatar.svg";
+import profAvatar from "../assets/user_placeholder.webp";
 
 export default function ProfileItems() {
     const navigate = useNavigate();

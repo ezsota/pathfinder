@@ -16,10 +16,13 @@ const AuthContext = createContext(null);
 export function AuthProvider({ children }) {
     console.log('AuthContext.jsx loaded');
 
-    // Authed user state
+    // User state
     const [user, setUser] = useState(null);
     // Historic users container || fallback
     const users = JSON.parse(localStorage.getItem(("users")) || "{}");
+
+    // Loading state/toggler
+    const [loading, setLoading] = useState(true);
 
     // Check if account exists (email)
     useEffect(() => {
@@ -29,6 +32,8 @@ export function AuthProvider({ children }) {
         if (sessionEmail && users[sessionEmail]) {
             setUser(users[sessionEmail]);
         }
+        //Toggle loading off
+        setLoading(false);
     }, []);
 
     const login = (email) => {
@@ -54,26 +59,29 @@ export function AuthProvider({ children }) {
     const deleteUsr = () => {
         if (!user) return;
         const email = user.email;
+        
         // User
-        const users = JSON.parse(localStorage.getItem("users")) || {};
-        delete users[email];
-        localStorage.setItem("users", JSON.stringify(users));
+        const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
+        delete storedUsers[email];
+        localStorage.setItem("users", JSON.stringify(storedUsers));
+
         // User Reservation
         const storedReservations = JSON.parse(localStorage.getItem("reservations")) || [];
         const updatedReservations = storedReservations.filter(res => res.email !== user.email);
         localStorage.setItem("reservations", JSON.stringify(updatedReservations));
+
         // End session
         logout();
 
         //logs
         console.log(email);
-        console.log(users);
+        console.log(storedUsers);
         console.log(storedReservations);
         console.log(updatedReservations);
     };
 
     return (
-        <AuthContext.Provider value={{ user, login, logout, deleteUsr }}>
+        <AuthContext.Provider value={{ user, loading, login, logout, deleteUsr }}>
             {children}
         </AuthContext.Provider>
     );

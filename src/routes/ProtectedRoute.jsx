@@ -3,14 +3,20 @@
 
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+// Loading
+import LoadingPage from "../pages/LoadingPage";
 
 export default function ProtectedRoute({children}) {
     console.log('ProtectedRoute({children}) loaded');
 
-    // user authorization data
-    const { user } = useAuth();
+    // get user and laoding states
+    const { user , loading } = useAuth();
     // URL location data
     const location = useLocation();
+
+    if (loading) {
+        return <LoadingPage />
+    }
 
     if (!user) {
         // if NOT authenticated then navigate to login page
