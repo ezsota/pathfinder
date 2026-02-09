@@ -18,7 +18,8 @@ The main objective of this project was to build an e-commerce site that successf
 - Responsive and modern design
 
 # AI Art Disclaimer
-Spacecraft images were sketched by me, then fed into AI to render images seen on /listings.
+- Spacecraft images were sketched by me, then fed into AI to render images seen on /listings. 
+- Original sketches can be found under src/assets/backups/ships_sketched.png
 
 **AI Prompt:**
 _"Transform these sketches into realistic 3D-style images suitable for a website. The images must be responsive to various screen sizes while maintaining high quality."_
