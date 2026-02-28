@@ -1,5 +1,3 @@
-// display general 'page not found'
-
 import errorBot from "../assets/not_found.webp"
 import { Link } from "react-router-dom"
 

@@ -1,5 +1,3 @@
-// user details page: name, username, email, password, address, active rentals (make all editable)
-
 import ProfileItems from "../components/ProfileItems.jsx";
 
 export default function UserProfile() {

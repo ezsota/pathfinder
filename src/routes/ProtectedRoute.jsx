@@ -1,6 +1,3 @@
-// not a visual page, but a gatekeeper, used to restrict or allow access to specific site content based on authentication status
-// AuthContext manages authentication state | ProtectedRoute manages routing decisions -> separate responsibilites
-
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 // Loading

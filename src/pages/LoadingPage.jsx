@@ -1,5 +1,3 @@
-// display loading spinner or message
-
 export default function LoadingPage() {
     console.log('LoadingPage.jsx loaded')
 

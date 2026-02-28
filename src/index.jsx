@@ -1,15 +1,3 @@
-/*
-  index.jsx:
-    Entry Point: This file serves as the entry point for your application.
-    Rendering: It is responsible for rendering the root React component (usually App) into the DOM.
-
-  Bootstrap:
-    Import Bootstrap first so it doesn't override custom CSS
-
-  AuthContext/AuthProvider:
-    Wrapping <AuthProvider> around <BrowserRouter> allows everything to access the auth state within AuthContext.jsx, AuthProvider isauth logic
-*/
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';

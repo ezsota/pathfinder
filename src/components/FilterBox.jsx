@@ -1,4 +1,3 @@
-//filter box (make this a rectangle with an image in the background) -> filter list of displayed crafts
 import { defaultFilter } from "../context/filterContext.js";
 import { craftData } from "../data/spacecrafts.js";
 

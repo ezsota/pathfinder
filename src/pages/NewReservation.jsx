@@ -1,6 +1,4 @@
-// checkout page -> review craft and select dates (days) -> book
 // ** Browsing is public. Booking is authenticated.
-
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { craftData } from "../data/spacecrafts.js";

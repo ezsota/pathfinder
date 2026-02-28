@@ -43,20 +43,3 @@ export default function Navbar() {
         </nav>
     );
 };
-
-/*
-==================
-REACT ROUTER NOTES
-==================
-    - In React Router, whenever a NavLink is active, it will automatically have an .active class applied for easy styling with CSS
-    - 'end' is used to strictly apply .active class only to links that exactly match to= value
-
-    -originally set <NavLink to="user/profile"> which is a relative path, ruining navigation -> example: linked to /listings/user/profile when clicking listings
-    - always set linking to absolute paths "example: /user/profile"
-
-    - originally used NavLink for logout -> logout is a state mutation not a navigation, mixed responsibilities -> used a button instead
-        <NavLink to="/" end onClick={logout}>
-            Logout
-        </NavLink>
-
-*/

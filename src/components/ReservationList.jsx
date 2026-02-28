@@ -1,6 +1,4 @@
-// view your reservations from user profile
 // Browsing is public. Booking is authenticated.
-
 export default function ReservationList(props) {
     console.log('Current User ResData:', props.userReservations)
 

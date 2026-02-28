@@ -1,4 +1,3 @@
-// All the details
 import { useParams, useNavigate } from "react-router-dom";
 import { craftData } from "../data/spacecrafts.js";
 import { useAuth } from "../context/AuthContext.jsx";

@@ -1,6 +1,4 @@
-// page within UserLayout for housing reservations list
 // Browsing is public. Booking is authenticated.
-
 import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext.jsx";
 import ReservationList from "../components/ReservationList.jsx";

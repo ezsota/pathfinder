@@ -1,5 +1,3 @@
-// copyright, standard footer
-
 export default function Footer() {
     return (
         <footer className="bg-darkblue text-end">
@@ -7,13 +5,3 @@ export default function Footer() {
         </footer>
     );
 };
-
-/*
-===============
-BOOTSTRAP NOTES
-===============
-    - py -> sets padding for top and bottom (y-axis)
-    - px -> for left and right (x-axis)
-    - ps -> padding start (left)
-    - pe -> padding end (right)
-*/

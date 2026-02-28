@@ -1,15 +1,4 @@
-/*
-=============================
-Mental Model for localStorage
-==============================
-localStorage = {
-  users: { [email]: user },
-  reservations: Reservation[],
-  currentUserEmail: string
-}
-*/
 import { useState, useEffect, createContext, useContext } from "react";
-
 // Auth data container
 const AuthContext = createContext(null);
 
@@ -89,20 +78,3 @@ export function AuthProvider({ children }) {
 
 // Export authentication data to other components (better reusability and encapsulation):
 export const useAuth = () => useContext(AuthContext);
-
-
-/*
-==================
-REACT/ROUTER NOTES
-===================
-    React context provides global user authentication state:
-        - allows logon status
-        - blocks access (ProtectedRoute)
-        - filter/display reservations by user/id
-
-    -crypto.randomUUID() -> uses the "crypto" module (native JS), using the "randomUUID" method, to simulate a real world user id creation.
-    -{children} -> built-in React prop allowing pass/access to external nested data -> used here to pass the user data to the app for routing/rendering
-    -AuthProvider wraps around <BrowserRouter> in index.jsx to allows authenticaton management logic to be accessed across the app using AuthContext
-    -AuthContext manages authentication state (ID Database) | ProtectedRoute manages routing decisions (Security Gatekeeper) -> separate responsibilites
-    -usrData change triggers re-render -> AuthContext.Provider/AuthContext update
-*/
